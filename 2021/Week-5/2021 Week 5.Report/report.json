@@ -1,0 +1,145 @@
+{
+  "config": "{\"version\":\"5.49\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY18SU07\",\"version\":\"3.15\",\"type\":2},\"customTheme\":{\"name\":\"HighContrast\",\"version\":\"5.17\",\"type\":2}},\"activeSectionIndex\":0,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"isPersistentUserStateDisabled\":false,\"hideVisualContainerHeader\":false,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":0,\"useNewFilterPaneExperience\":false,\"optOutNewFilterPaneExperience\":false,\"defaultFilterActionIsDataFilter\":false,\"useCrossReportDrillthrough\":false,\"allowChangeFilterTypes\":false,\"allowInlineExploration\":false,\"disableFilterPaneSearch\":false,\"enableDeveloperMode\":false},\"objects\":{\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "ReportSection",
+      "config": "{\"acceptsFilterContext\":1}",
+      "name": "Pod1"
+    },
+    {
+      "boundSection": "ReportSection0b15292dbb332a71a2c0",
+      "config": "{\"acceptsFilterContext\":1}",
+      "name": "Pod2"
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY18SU07",
+            "path": "BaseThemes/CY18SU07.json",
+            "type": 202
+          },
+          {
+            "name": "HighContrast",
+            "path": "BuiltInThemes/HighContrast.json",
+            "type": 201
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "UFO_bw.jpg",
+            "path": "UFO_bw.jpg",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "WordCloud1447959067750.pbiviz.json",
+            "path": "WordCloud1447959067750.pbiviz.json",
+            "type": 5
+          }
+        ],
+        "name": "WordCloud1447959067750",
+        "type": 0
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"outspace\":[{\"properties\":{\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}},\"url\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#000000'\"}}}}}}}],\"background\":[{\"properties\":{\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"100D\"}}}}}]},\"visibility\":0}",
+      "displayName": "Report",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filterebff5a76f2076ef8e479\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"reports\"}},\"Property\":\"Location\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"reports\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Location\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"''\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"75c101608b1d32492bf7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":834.9066213921901,\"y\":144.24448217317487,\"z\":2000,\"width\":436.4006791171477,\"height\":551.3073005093379,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Values\":[{\"queryRef\":\"reports.Total Sightings\"}],\"Rows\":[{\"queryRef\":\"reports.Location\",\"active\":true},{\"queryRef\":\"reports.Shape\"},{\"queryRef\":\"reports.Duration\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"reports\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Total Sightings\"},\"Name\":\"reports.Total Sightings\",\"NativeReferenceName\":\"Total Sightings\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Location\"},\"Name\":\"reports.Location\",\"NativeReferenceName\":\"Location\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Shape\"},\"Name\":\"reports.Shape\",\"NativeReferenceName\":\"Shape\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Duration\"},\"Name\":\"reports.Duration\",\"NativeReferenceName\":\"Duration\"}]},\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"336.254678881635D\"}}}},\"selector\":{\"metadata\":\"reports.Location\"}}],\"rowHeaders\":[{\"properties\":{\"showExpandCollapseButtons\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'FlashyRows'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 551.31,
+          "width": 436.40,
+          "x": 834.91,
+          "y": 144.24,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"8e103212246c23f99eec\",\"layouts\":[{\"id\":0,\"position\":{\"x\":29.33786078098472,\"y\":144.24448217317487,\"z\":0,\"width\":793.3446519524618,\"height\":145.46689303904924,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"reports.Total Sightings\"},{\"queryRef\":\"reports.% in American Southwest\"},{\"queryRef\":\"reports.% suspected hoax\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"reports\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Total Sightings\"},\"Name\":\"reports.Total Sightings\",\"NativeReferenceName\":\"Total Sightings\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"% in American Southwest\"},\"Name\":\"reports.% in American Southwest\",\"NativeReferenceName\":\"% in American Southwest\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"% suspected hoax\"},\"Name\":\"reports.% suspected hoax\",\"NativeReferenceName\":\"% suspected hoax\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Total Sightings\"}}}]},\"hasDefaultSort\":true,\"objects\":{\"value\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"18D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}}],\"label\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"shadowCustom\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"fillCustom\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#4D4C4C'\"}}}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#4D4C4C'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 145.47,
+          "width": 793.34,
+          "x": 29.34,
+          "y": 144.24,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"93bac3e27d861ea2626d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":294.60101867572155,\"y\":39.117147707979626,\"z\":3000,\"width\":821.4601018675721,\"height\":69.6774193548387,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Global UFO Sightings in the Last 5 Years\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"Calibri\",\"fontSize\":\"36pt\",\"color\":\"#ffffff\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 69.68,
+          "width": 821.46,
+          "x": 294.60,
+          "y": 39.12,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"de2c77a1e70d736fa30e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":29.33786078098472,\"y\":304.3803056027165,\"z\":1000,\"width\":793.3446519524618,\"height\":391.17147707979626,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"reports.Posted.Variation.Date Hierarchy.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"reports.Total Sightings\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"reports\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Name\":\"Variation\",\"Property\":\"Posted\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"reports.Posted.Variation.Date Hierarchy.Year\",\"NativeReferenceName\":\"Posted Year\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Total Sightings\"},\"Name\":\"reports.Total Sightings\",\"NativeReferenceName\":\"Total Sightings\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Name\":\"Variation\",\"Property\":\"Posted\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"}}}]},\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#276CA0'\"}}}}}}}],\"categoryAxis\":[{\"properties\":{\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"valueAxis\":[{\"properties\":{\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"gridlineShow\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#4D4C4C'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 391.17,
+          "width": 793.34,
+          "x": 29.34,
+          "y": 304.38,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'UFO_bw.jpg'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"UFO_bw.jpg\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"outspace\":[{\"properties\":{\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}},\"url\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}}}}}}]},\"visibility\":1}",
+      "displayName": "References",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection0b15292dbb332a71a2c0",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"54f3fdfca977c601bbae\",\"layouts\":[{\"id\":0,\"position\":{\"x\":108.62985685071578,\"y\":139.38650306748465,\"z\":1000,\"width\":1062.7402862985684,\"height\":543.8036809815951,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Data Source: \",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"16pt\",\"color\":\"#000000\"}},{\"value\":\"National UFO Reporting Center\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"16pt\",\"color\":\"#000000\"},\"url\":\"http://www.nuforc.org/\"}]},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"I originally learned of this data set from Paul Turley. Check out his incredibly helpful \",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"16pt\",\"color\":\"#000000\"}},{\"value\":\"SQL Server BI Blog\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"16pt\",\"color\":\"#000000\"},\"url\":\"https://sqlserverbi.blog/\"}]},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"What is this \\\"hidden tab?\\\" Learn more \",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"16pt\",\"color\":\"#000000\"}},{\"value\":\"here \",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"16pt\",\"color\":\"#000000\"},\"url\":\"https://powerbi.microsoft.com/en-us/blog/power-bi-desktop-january-2018-feature-summary/#hidePages\"},{\"value\":\"on the official Power BI blog\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"16pt\",\"color\":\"#000000\"}}]},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"Learn more about drill-down in Power BI:\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"16pt\"}}]},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"\\t\"},{\"value\":\"- Power BI Documentation: \",\"textStyle\":{\"fontSize\":\"14pt\"}},{\"value\":\"Drill mode in a visual in Power BI\",\"textStyle\":{\"fontSize\":\"14pt\"},\"url\":\"https://docs.microsoft.com/en-us/power-bi/consumer/end-user-drill\"}]},{\"textRuns\":[{\"value\":\"\\t\"}]},{\"textRuns\":[{\"value\":\"\\t- Video: \",\"textStyle\":{\"fontSize\":\"14pt\"}},{\"value\":\"Controlling Power BI drill down with a few tricks\",\"textStyle\":{\"fontSize\":\"14pt\"},\"url\":\"https://www.youtube.com/watch?v=a8r7c9NnLFY\"},{\"value\":\" by Guy in a Cube\",\"textStyle\":{\"fontSize\":\"14pt\"}}]},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"Learn more about measures!\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"16pt\",\"color\":\"#000000\"}}]},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"\\t- Tutorial: \",\"textStyle\":{\"fontSize\":\"14pt\"}},{\"value\":\"Create your own measures in Power BI Desktop\",\"textStyle\":{\"fontSize\":\"14pt\"},\"url\":\"https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-tutorial-create-measures\"}]},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"\\t- Video Course: \",\"textStyle\":{\"fontSize\":\"14pt\"}},{\"value\":\"Introducing DAX by SQLBI\",\"textStyle\":{\"fontSize\":\"14pt\"},\"url\":\"https://www.sqlbi.com/p/introducing-dax-video-course/\"}]},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"\\t- Video: \",\"textStyle\":{\"fontSize\":\"14pt\"}},{\"value\":\"Difference between a measure and a calculated column by SQLBI\",\"textStyle\":{\"fontSize\":\"14pt\"},\"url\":\"https://www.youtube.com/watch?v=ePPi1LLX0sA&feature=emb_logo\"}]},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"\\t- Video: \",\"textStyle\":{\"fontSize\":\"14pt\"}},{\"value\":\"Using Quick Measures in Power BI\",\"textStyle\":{\"fontSize\":\"14pt\"},\"url\":\"https://youtu.be/faUvo30iDWg\"}]},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"\\t\",\"textStyle\":{\"fontSize\":\"14pt\"}}]}]}}]},\"vcObjects\":{\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 543.80,
+          "width": 1062.74,
+          "x": 108.63,
+          "y": 139.39,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"9a927ce7023eea1722fe\",\"layouts\":[{\"id\":0,\"position\":{\"x\":210.7157464212679,\"y\":16.359918200409,\"z\":0,\"width\":858.5685071574642,\"height\":97.50511247443762,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"References and Resources\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"44pt\",\"color\":\"#ffffff\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 97.51,
+          "width": 858.57,
+          "x": 210.72,
+          "y": 16.36,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ],
+  "theme": "HighContrast"
+}

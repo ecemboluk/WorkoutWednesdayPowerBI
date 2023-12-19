@@ -1,0 +1,1017 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Outcomes Original\",\"Outcomes Animal\",\"Intakes Original\",\"Intakes Animal\",\"Intakes\",\"Outcomes\",\"Date\",\"Animal\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.123.684.0 (23.11)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "Outcomes Original",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "expression": [
+          "let",
+          "//get data from source csv",
+          "    Source = Csv.Document(File.Contents(\"C:\\Users\\meagan\\Downloads\\Austin_Animal_Center_Outcomes (1).csv\"),[Delimiter=\",\", Columns=12, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+          "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+          "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Animal ID\", type text}, {\"Name\", type text}, {\"DateTime\", type datetime}, {\"MonthYear\", type datetime}, {\"Date of Birth\", type date}, {\"Outcome Type\", type text}, {\"Outcome Subtype\", type text}, {\"Animal Type\", type text}, {\"Sex upon Outcome\", type text}, {\"Age upon Outcome\", type text}, {\"Breed\", type text}, {\"Color\", type text}}),",
+          "    #\"Replaced Value\" = Table.ReplaceValue(#\"Changed Type\",\"\",\"Unknown\",Replacer.ReplaceValue,{\"Outcome Type\"})",
+          "in",
+          "    #\"Replaced Value\""
+        ],
+        "kind": "m",
+        "lineageTag": "44f0aa44-072b-456e-8e66-649f0b1b33a8",
+        "queryGroup": "Staging"
+      },
+      {
+        "name": "Outcomes Animal",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "expression": [
+          "let",
+          "//Seaprating animal information from outcomes source to create more of a dimensional model",
+          "    Source = #\"Outcomes Original\",",
+          "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"Animal ID\", \"Name\", \"Date of Birth\", \"Animal Type\", \"Breed\", \"Color\"})",
+          "in",
+          "    #\"Removed Other Columns\""
+        ],
+        "kind": "m",
+        "lineageTag": "79de89dd-bb37-4518-bea6-8ab76d246ea4",
+        "queryGroup": "Staging"
+      },
+      {
+        "name": "Intakes Original",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "expression": [
+          "let",
+          "//get data from source csv",
+          "    Source = Csv.Document(File.Contents(\"C:\\Users\\meagan\\Downloads\\Austin_Animal_Center_Intakes (2).csv\"),[Delimiter=\",\", Columns=12, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+          "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+          "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Animal ID\", type text}, {\"Name\", type text}, {\"DateTime\", type datetime}, {\"MonthYear\", type datetime}, {\"Found Location\", type text}, {\"Intake Type\", type text}, {\"Intake Condition\", type text}, {\"Animal Type\", type text}, {\"Sex upon Intake\", type text}, {\"Age upon Intake\", type text}, {\"Breed\", type text}, {\"Color\", type text}})",
+          "in",
+          "    #\"Changed Type\""
+        ],
+        "kind": "m",
+        "lineageTag": "a3c3a479-a1a4-4932-bc38-fdf68852f350",
+        "queryGroup": "Staging"
+      },
+      {
+        "name": "Intakes Animal",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "expression": [
+          "let",
+          "//Seaprating animal information from intakes source to create more of a dimensional model",
+          "    Source = #\"Intakes Original\",",
+          "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"Animal ID\", \"Name\", \"Animal Type\", \"Breed\", \"Color\"})",
+          "in",
+          "    #\"Removed Other Columns\""
+        ],
+        "kind": "m",
+        "lineageTag": "1ddfac6f-cc4a-4423-ba6e-d1cd20494506",
+        "queryGroup": "Staging"
+      }
+    ],
+    "queryGroups": [
+      {
+        "annotations": [
+          {
+            "name": "PBI_QueryGroupOrder",
+            "value": "0"
+          }
+        ],
+        "folder": "Staging"
+      },
+      {
+        "annotations": [
+          {
+            "name": "PBI_QueryGroupOrder",
+            "value": "1"
+          }
+        ],
+        "folder": "Reporting"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "534e71a2-a7b6-4635-a63b-bafb1160a281",
+        "fromColumn": "Animal ID",
+        "fromTable": "Intakes",
+        "toColumn": "Animal ID",
+        "toTable": "Animal"
+      },
+      {
+        "name": "26b967e5-117f-4367-bb7e-9ea7cb324d12",
+        "fromColumn": "Animal ID",
+        "fromTable": "Outcomes",
+        "toColumn": "Animal ID",
+        "toTable": "Animal"
+      },
+      {
+        "name": "618c2996-a129-43a7-96fa-10f5fe511319",
+        "fromColumn": "Outcome Date",
+        "fromTable": "Outcomes",
+        "toColumn": "Date",
+        "toTable": "Date"
+      },
+      {
+        "name": "2d55cb62-b307-47f9-ad6a-306574e71dd7",
+        "fromColumn": "Intake Date",
+        "fromTable": "Intakes",
+        "toColumn": "Date",
+        "toTable": "Date"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Animal",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Animal ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "012ed545-3a13-4189-ba65-41889592e2d5",
+            "sourceColumn": "Animal ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "420e83f2-20b5-4cce-ae05-eb16ca4b9ec6",
+            "sourceColumn": "Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Date of Birth",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd-mmm-yy",
+            "lineageTag": "30e56bd0-ae9e-42e1-b396-1d52892e7eed",
+            "sourceColumn": "Date of Birth",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Animal Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "28a5efe9-4835-46b2-8770-ebfc64151546",
+            "sourceColumn": "Animal Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Breed",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0aac69af-0a15-404b-a2d5-9c275262ddf9",
+            "sourceColumn": "Breed",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Color",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "84b8ebb3-bb84-472c-a40b-fdc32f29e2e9",
+            "sourceColumn": "Color",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "807fb2fe-32f0-41a8-8d59-ea155e52e231",
+        "measures": [
+          {
+            "name": "Animal Counter",
+            "expression": "CALCULATE(count(Animal[Animal ID]), FILTER('Animal', OR([Intakes] > 0 , [Outcomes] > 0)))",
+            "formatString": "#,0",
+            "lineageTag": "71b1a927-46f1-4981-abe4-fd240acbabb8"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Animal-d0fa6c79-d28f-42f6-b233-28c1f66a9a45",
+            "mode": "import",
+            "queryGroup": "Reporting",
+            "source": {
+              "expression": [
+                "let",
+                "//creating an animal dimension with info from both intakes and outcomes, removing duplicates so there is one row per animal ID",
+                "    Source = Table.Combine({#\"Outcomes Animal\", #\"Intakes Animal\"}),",
+                "    #\"Sort Rows for Max DOB\" = Table.Sort(Source,{{\"Date of Birth\", Order.Descending}}),",
+                "    #\"Removed Duplicate AnimalID\" = Table.Distinct(#\"Sort Rows for Max DOB\", {\"Animal ID\"})",
+                "in",
+                "    #\"Removed Duplicate AnimalID\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Intakes",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Animal ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "4f61567d-21f8-4264-900b-a2ffa250d20c",
+            "sourceColumn": "Animal ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Intake Time",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Time"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Time",
+            "lineageTag": "6d84e065-cf33-4a8d-a9d2-58095ca14c60",
+            "sourceColumn": "Intake Time",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Found Location",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "299b2316-13c4-4af2-820e-d6ee8e7d3c33",
+            "sourceColumn": "Found Location",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Intake Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8b271746-071e-41fc-aae7-fd49ff885b27",
+            "sourceColumn": "Intake Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Intake Condition",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "abca1f68-54af-45a8-af60-1b17aa14cf26",
+            "sourceColumn": "Intake Condition",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sex Upon Intake",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e00548e7-abeb-417e-86b6-f56f2ffd4cff",
+            "sourceColumn": "Sex Upon Intake",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Age Upon Intake",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c0eb7c25-9714-43e6-ac6f-f387cdf085d5",
+            "sourceColumn": "Age Upon Intake",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Intake Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd-mmm-yy",
+            "isHidden": true,
+            "lineageTag": "228de677-247c-424c-b4cd-560deed28a37",
+            "sourceColumn": "Intake Date",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "86a51f32-8f95-4dbc-bf66-a8de8e5833df",
+        "measures": [
+          {
+            "name": "Intakes",
+            "expression": "COUNTROWS(Intakes)",
+            "formatString": "#,0",
+            "lineageTag": "d6164b23-e4d3-43a4-92e2-d9755af58533"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Intakes-b5d0b01b-57f4-4765-b2ab-9bc7ec3c305d",
+            "mode": "import",
+            "queryGroup": "Reporting",
+            "source": {
+              "expression": [
+                "let",
+                "//creating a factless fact table - removing extraneous columns, splitting datetime into date and time",
+                "    Source = #\"Intakes Original\",",
+                "    #\"Removed Columns\" = Table.RemoveColumns(Source,{\"Name\", \"MonthYear\", \"Color\", \"Breed\", \"Animal Type\"}),",
+                "    #\"Inserted Date\" = Table.AddColumn(#\"Removed Columns\", \"Date\", each DateTime.Date([DateTime]), type date),",
+                "    #\"Change DateTime to Time\" = Table.TransformColumnTypes(#\"Inserted Date\",{{\"DateTime\", type time}}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Change DateTime to Time\",{{\"DateTime\", \"Intake Time\"}, {\"Date\", \"Intake Date\"}, {\"Age upon Intake\", \"Age Upon Intake\"}, {\"Sex upon Intake\", \"Sex Upon Intake\"}})",
+                "in",
+                "    #\"Renamed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Outcomes",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Animal ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "ac78b2e6-f620-4b44-9a48-a31e2ffeaf96",
+            "sourceColumn": "Animal ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Outcome Time",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Time"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Time",
+            "lineageTag": "4d889dcb-f5a8-4fe1-96b5-9f27406bbf82",
+            "sourceColumn": "Outcome Time",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Outcome Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1fd8a3b6-d12c-495b-a416-8c39c7b0228f",
+            "sourceColumn": "Outcome Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Outcome Subtype",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "34d046ab-4bba-45fd-9f2c-06bdcb5cfad4",
+            "sourceColumn": "Outcome Subtype",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sex Upon Outcome",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "42bc4489-5ac4-492d-b0cd-5b22f2d2b828",
+            "sourceColumn": "Sex Upon Outcome",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Age Upon Outcome",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cb6434b0-3c4a-469a-b30b-07047d0a52ca",
+            "sourceColumn": "Age Upon Outcome",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Outcome Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd-mmm-yy",
+            "isHidden": true,
+            "lineageTag": "e29e12b4-1242-4103-9236-7aaf60f13d58",
+            "sourceColumn": "Outcome Date",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "1910988e-37d0-472e-8418-ad52c15353ea",
+        "measures": [
+          {
+            "name": "Outcomes",
+            "expression": "COUNTROWS('Outcomes')",
+            "formatString": "#,0",
+            "lineageTag": "cf3125da-308a-4ead-a1cb-8727b7225da3"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Outcomes-74502beb-946d-46f4-8782-21e5a5e89a6a",
+            "mode": "import",
+            "queryGroup": "Reporting",
+            "source": {
+              "expression": [
+                "let",
+                "//creating a factless fact table - removing extraneous columns, splitting datetime into date and time",
+                "    Source = #\"Outcomes Original\",",
+                "    #\"Removed Columns\" = Table.RemoveColumns(Source,{\"Name\", \"MonthYear\", \"Date of Birth\", \"Animal Type\", \"Breed\", \"Color\"}),",
+                "    #\"Inserted Date\" = Table.AddColumn(#\"Removed Columns\", \"Date\", each DateTime.Date([DateTime]), type date),",
+                "    #\"Changed Datetime to Time\" = Table.TransformColumnTypes(#\"Inserted Date\",{{\"DateTime\", type time}}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Datetime to Time\",{{\"DateTime\", \"Outcome Time\"}, {\"Date\", \"Outcome Date\"}, {\"Age upon Outcome\", \"Age Upon Outcome\"}, {\"Sex upon Outcome\", \"Sex Upon Outcome\"}})",
+                "in",
+                "    #\"Renamed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Date",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd-mmm-yy",
+            "isKey": true,
+            "lineageTag": "58e6b87d-397e-403b-833f-9315309e57a7",
+            "sourceColumn": "Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "1b8f4f1f-411f-4723-8807-86edbdf43f09",
+            "sourceColumn": "Year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Start of Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd-mmm-yy",
+            "lineageTag": "2cd25638-2323-4ade-a8c2-8a1128401328",
+            "sourceColumn": "Start of Year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "End of Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd-mmm-yy",
+            "lineageTag": "da60afad-ce04-4e3f-a03c-248ad809e04c",
+            "sourceColumn": "End of Year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "032907fb-61eb-4ac0-b43c-a93d301635a7",
+            "sourceColumn": "Month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Start of Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd-mmm-yy",
+            "lineageTag": "7d7d1897-8339-4427-b640-eace88325a02",
+            "sourceColumn": "Start of Month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "End of Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd-mmm-yy",
+            "lineageTag": "2d1f466e-9c57-4f42-96b8-780dbbf0e6b5",
+            "sourceColumn": "End of Month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Days in Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "3e79ebb8-5bbf-4af9-936a-404e2d7ceeaf",
+            "sourceColumn": "Days in Month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "3b9a9264-bf5b-4550-8937-b2fe82895a84",
+            "sourceColumn": "Day",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Day Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d12d1525-4e6e-4059-969e-e116e8c37806",
+            "sortByColumn": "Day of Week",
+            "sourceColumn": "Day Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Day of Week",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "7d29dfa7-9c7b-4059-9c93-973799baa153",
+            "sourceColumn": "Day of Week",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Day of Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "fa9eadb7-e37e-4cde-b3fd-e247a1359c8d",
+            "sourceColumn": "Day of Year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Month Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2192bcd7-d138-4197-bcc9-4da18521caaf",
+            "sortByColumn": "Month",
+            "sourceColumn": "Month Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "01538060-ed90-4648-a85e-58c3a5baa9f9",
+            "sourceColumn": "Quarter",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Start of Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd-mmm-yy",
+            "lineageTag": "5bdf8817-32d7-4222-852d-83d167f4ef6d",
+            "sourceColumn": "Start of Quarter",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "End of Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd-mmm-yy",
+            "lineageTag": "c6940f0b-d39e-4c0c-ad72-7e3a782c4e66",
+            "sourceColumn": "End of Quarter",
+            "summarizeBy": "none"
+          }
+        ],
+        "dataCategory": "Time",
+        "lineageTag": "bd59546e-3d67-4a71-be67-a87e511fc2da",
+        "measures": [
+          {
+            "name": "As of Date",
+            "expression": [
+              "",
+              "VAR LastDt = CALCULATE(MAX('Intakes'[Intake Date]), ALL('Date'))",
+              "RETURN \"Data as of \" & Format(LastDt, \"DD MMM YYYY\")"
+            ],
+            "lineageTag": "1f5682a5-1455-4992-b09c-0abfcf22a24d"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Date-92d4f0ca-059e-4853-894c-b7a6e531c4fc",
+            "mode": "import",
+            "queryGroup": "Reporting",
+            "source": {
+              "expression": [
+                "let",
+                "    // configurations start",
+                "    Today=Date.From(DateTime.LocalNow()), // today's date",
+                "    FromYear = 2013, // set the start year of the date dimension. dates start from 1st of January of this year",
+                "    ToYear=2021, // set the end year of the date dimension. dates end at 31st of December of this year",
+                "    // configuration end",
+                "    FromDate=#date(FromYear,1,1),",
+                "    ToDate=#date(ToYear,12,31),",
+                "    Source=List.Dates(",
+                "        FromDate,",
+                "        Duration.Days(ToDate-FromDate)+1,",
+                "        #duration(1,0,0,0)",
+                "    ),",
+                "    #\"Converted to Table\" = Table.FromList(Source, Splitter.SplitByNothing(), null, null, ExtraValues.Error),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Converted to Table\",{{\"Column1\", \"Date\"}}),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Renamed Columns\",{{\"Date\", type date}}),",
+                "    #\"Inserted Year\" = Table.AddColumn(#\"Changed Type\", \"Year\", each Date.Year([Date]), Int64.Type),",
+                "    #\"Inserted Start of Year\" = Table.AddColumn(#\"Inserted Year\", \"Start of Year\", each Date.StartOfYear([Date]), type date),",
+                "    #\"Inserted End of Year\" = Table.AddColumn(#\"Inserted Start of Year\", \"End of Year\", each Date.EndOfYear([Date]), type date),",
+                "    #\"Inserted Month\" = Table.AddColumn(#\"Inserted End of Year\", \"Month\", each Date.Month([Date]), Int64.Type),",
+                "    #\"Inserted Start of Month\" = Table.AddColumn(#\"Inserted Month\", \"Start of Month\", each Date.StartOfMonth([Date]), type date),",
+                "    #\"Inserted End of Month\" = Table.AddColumn(#\"Inserted Start of Month\", \"End of Month\", each Date.EndOfMonth([Date]), type date),",
+                "    #\"Inserted Days in Month\" = Table.AddColumn(#\"Inserted End of Month\", \"Days in Month\", each Date.DaysInMonth([Date]), Int64.Type),",
+                "    #\"Inserted Day\" = Table.AddColumn(#\"Inserted Days in Month\", \"Day\", each Date.Day([Date]), Int64.Type),",
+                "    #\"Inserted Day Name\" = Table.AddColumn(#\"Inserted Day\", \"Day Name\", each Date.DayOfWeekName([Date]), type text),",
+                "    #\"Inserted Day of Week\" = Table.AddColumn(#\"Inserted Day Name\", \"Day of Week\", each Date.DayOfWeek([Date]), Int64.Type),",
+                "    #\"Inserted Day of Year\" = Table.AddColumn(#\"Inserted Day of Week\", \"Day of Year\", each Date.DayOfYear([Date]), Int64.Type),",
+                "    #\"Inserted Month Name\" = Table.AddColumn(#\"Inserted Day of Year\", \"Month Name\", each Date.MonthName([Date]), type text),",
+                "    #\"Inserted Quarter\" = Table.AddColumn(#\"Inserted Month Name\", \"Quarter\", each Date.QuarterOfYear([Date]), Int64.Type),",
+                "    #\"Inserted Start of Quarter\" = Table.AddColumn(#\"Inserted Quarter\", \"Start of Quarter\", each Date.StartOfQuarter([Date]), type date),",
+                "    #\"Inserted End of Quarter\" = Table.AddColumn(#\"Inserted Start of Quarter\", \"End of Quarter\", each Date.EndOfQuarter([Date]), type date)",
+                "in",
+                "    #\"Inserted End of Quarter\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,3865 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.123.684.0 (23.11)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"reports\",\"reportData\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Entities": {
+              "report": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "reports"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "report": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "information": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "commentary": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "description": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "presentation": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "statement": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "forecast": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "account": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "article": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "narrative": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "paper": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  }
+                ]
+              },
+              "report.american_southwest_sightings": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "reports",
+                    "ConceptualProperty": "American Southwest Sightings"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "american southwest sightings": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "american southwest detection": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "american southwest finding": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  }
+                ]
+              },
+              "report.city": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "reports",
+                    "ConceptualProperty": "City"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "city": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "metropolis": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "municipality": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "town": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "metropolitan": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  }
+                ]
+              },
+              "report.date___time": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "reports",
+                    "ConceptualProperty": "Date / Time"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "date / time": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  },
+                  {
+                    "date time": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "date / duration": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "date / interval": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "date / moment": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "date duration": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "date interval": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "date moment": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "date / period": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "date / timetable": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "date period": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "date timetable": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "report.date___time.variation.date_hierarchy": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "reports",
+                    "Hierarchy": "Date Hierarchy",
+                    "VariationSet": "Variation",
+                    "VariationSource": "Date / Time"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "date hierarchy / time": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date hierarchy": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "hierarchy": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "date hierarchy time": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "date hierarchy / duration": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.771
+                    }
+                  },
+                  {
+                    "date hierarchy / interval": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.771
+                    }
+                  },
+                  {
+                    "date hierarchy / moment": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.771
+                    }
+                  },
+                  {
+                    "date hierarchy duration": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "date hierarchy interval": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "date hierarchy moment": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "date hierarchy / period": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.748
+                    }
+                  },
+                  {
+                    "date hierarchy / timetable": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.748
+                    }
+                  },
+                  {
+                    "date hierarchy period": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "date hierarchy timetable": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  }
+                ]
+              },
+              "report.date___time.variation.date_hierarchy.day": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "reports",
+                    "Hierarchy": "Date Hierarchy",
+                    "HierarchyLevel": "Day",
+                    "VariationSet": "Variation",
+                    "VariationSource": "Date / Time"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "day / time": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "day": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date / time day": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "day time": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "date time day": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "time day": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "day / duration": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "day / interval": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "day / moment": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "day duration": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "day interval": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "day moment": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "day / period": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "day / timetable": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "day period": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "day timetable": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "report.date___time.variation.date_hierarchy.month": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "reports",
+                    "Hierarchy": "Date Hierarchy",
+                    "HierarchyLevel": "Month",
+                    "VariationSet": "Variation",
+                    "VariationSource": "Date / Time"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "month / time": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "month": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date / time month": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "month time": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "date time month": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "time month": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "date / time mth": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.771
+                    }
+                  },
+                  {
+                    "month / duration": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "month / interval": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "month / moment": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "date time mth": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "month duration": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "month interval": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "month moment": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "time mth": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "month / period": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  }
+                ]
+              },
+              "report.date___time.variation.date_hierarchy.quarter": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "reports",
+                    "Hierarchy": "Date Hierarchy",
+                    "HierarchyLevel": "Quarter",
+                    "VariationSet": "Variation",
+                    "VariationSource": "Date / Time"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "quarter / time": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "quarter": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date / time quarter": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "quarter time": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "date time quarter": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "time quarter": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "date / time qtr": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.857
+                    }
+                  },
+                  {
+                    "date time qtr": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.846
+                    }
+                  },
+                  {
+                    "time qtr": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.833
+                    }
+                  },
+                  {
+                    "qtr": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.818
+                    }
+                  },
+                  {
+                    "quarter / duration": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "quarter / interval": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "quarter / moment": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "quarter duration": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "quarter interval": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "quarter moment": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  }
+                ]
+              },
+              "report.date___time.variation.date_hierarchy.year": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "reports",
+                    "Hierarchy": "Date Hierarchy",
+                    "HierarchyLevel": "Year",
+                    "VariationSet": "Variation",
+                    "VariationSource": "Date / Time"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "year / time": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "year": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date / time year": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "year time": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "date time year": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "time year": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "date / time yr": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.771
+                    }
+                  },
+                  {
+                    "year / duration": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "year / interval": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "year / moment": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "date time yr": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "year duration": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "year interval": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "year moment": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "time yr": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "year / period": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  }
+                ]
+              },
+              "report.duration": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "reports",
+                    "ConceptualProperty": "Duration"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "duration": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "length": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "extent": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "interval": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "period": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "spell": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
+              "report.in_american_southwest": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "reports",
+                    "ConceptualProperty": "% in American Southwest"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "% in american southwest": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "percentage in american southwest": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.771
+                    }
+                  },
+                  {
+                    "pct in american southwest": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.748
+                    }
+                  },
+                  {
+                    "Sightings in American Southwest": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "report.location": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "reports",
+                    "ConceptualProperty": "Location"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "location": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "locality": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "placement": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "scene": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "venue": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "address": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "place": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "position": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "setting": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "site": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "spot": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  }
+                ]
+              },
+              "report.posted": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "reports",
+                    "ConceptualProperty": "Posted"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "posted": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  }
+                ]
+              },
+              "report.posted.variation.date_hierarchy": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "reports",
+                    "Hierarchy": "Date Hierarchy",
+                    "VariationSet": "Variation",
+                    "VariationSource": "Posted"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "posted date hierarchy": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date hierarchy": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "hierarchy": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ]
+              },
+              "report.posted.variation.date_hierarchy.day": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "reports",
+                    "Hierarchy": "Date Hierarchy",
+                    "HierarchyLevel": "Day",
+                    "VariationSet": "Variation",
+                    "VariationSource": "Posted"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "day": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "posted day": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "report.posted.variation.date_hierarchy.month": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "reports",
+                    "Hierarchy": "Date Hierarchy",
+                    "HierarchyLevel": "Month",
+                    "VariationSet": "Variation",
+                    "VariationSource": "Posted"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "month": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "posted month": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "posted mth": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "mth": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  }
+                ]
+              },
+              "report.posted.variation.date_hierarchy.quarter": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "reports",
+                    "Hierarchy": "Date Hierarchy",
+                    "HierarchyLevel": "Quarter",
+                    "VariationSet": "Variation",
+                    "VariationSource": "Posted"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "quarter": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "posted quarter": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "posted qtr": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.833
+                    }
+                  },
+                  {
+                    "qtr": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.818
+                    }
+                  }
+                ]
+              },
+              "report.posted.variation.date_hierarchy.year": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "reports",
+                    "Hierarchy": "Date Hierarchy",
+                    "HierarchyLevel": "Year",
+                    "VariationSet": "Variation",
+                    "VariationSource": "Posted"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "year": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "posted year": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "posted yr": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "yr": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  }
+                ]
+              },
+              "report.shape": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "reports",
+                    "ConceptualProperty": "Shape"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "shape": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "form": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "figure": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "outline": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "silhouette": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "profile": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "contour": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "nature": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "identity": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "appearance": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "character": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.452
+                    }
+                  }
+                ]
+              },
+              "report.shape_groups": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "reports",
+                    "ConceptualProperty": "Shape (groups)"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "shape (groups)": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "shape (group)": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.78
+                    }
+                  },
+                  {
+                    "shape": {
+                      "State": "Generated",
+                      "Weight": 0.75
+                    }
+                  }
+                ]
+              },
+              "report.state": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "reports",
+                    "ConceptualProperty": "State"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {},
+                  {
+                    "province": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "territory": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "nation": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "condition": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "country": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  }
+                ]
+              },
+              "report.summary": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "reports",
+                    "ConceptualProperty": "Summary"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "summary": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "synopsis": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "explanation": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "extraction": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "summarisation": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "review": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "abstract": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "outline": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "overview": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "paraphrase": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "recap": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  }
+                ]
+              },
+              "report.suspected_hoax": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "reports",
+                    "ConceptualProperty": "Suspected Hoax"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "suspected hoax": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "hoax": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "suspected ruse": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "suspected fraud": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "suspected deception": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "ruse": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "fraud": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "deception": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "suspected trick": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "suspected joke": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "suspected swindle": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "suspected prank": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  }
+                ]
+              },
+              "report.suspected_hoax1": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "reports",
+                    "ConceptualProperty": "% suspected hoax"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "% suspected hoax": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "Hoax": {
+                      "State": "Suggested",
+                      "Weight": 0.873
+                    }
+                  },
+                  {
+                    "percentage suspected hoax": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "pct suspected hoax": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "% suspected ruse": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "% suspected fraud": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "% suspected deception": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "suspected ruse": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "suspected fraud": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "suspected deception": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "% suspected trick": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "% suspected joke": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "Suspected Hoax": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "report.total_sightings": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "reports",
+                    "ConceptualProperty": "Total Sightings"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "total sightings": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "sightings": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "aggregate sighting": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "overall sighting": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "total detection": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "detection": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "total finding": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "finding": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              }
+            },
+            "Language": "en-US",
+            "Relationships": {
+              "report_date___time_has_variation_date_hierarchy": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.date___time.variation.date_hierarchy"
+                      },
+                      "Subject": {
+                        "Role": "report.date___time"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report.date___time": {
+                    "Target": {
+                      "Entity": "report.date___time"
+                    }
+                  },
+                  "report.date___time.variation.date_hierarchy": {
+                    "Target": {
+                      "Entity": "report.date___time.variation.date_hierarchy"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_date___time_variation_date_hierarchy_has_day": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.date___time.variation.date_hierarchy.day"
+                      },
+                      "Subject": {
+                        "Role": "report.date___time.variation.date_hierarchy"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report.date___time.variation.date_hierarchy": {
+                    "Target": {
+                      "Entity": "report.date___time.variation.date_hierarchy"
+                    }
+                  },
+                  "report.date___time.variation.date_hierarchy.day": {
+                    "Target": {
+                      "Entity": "report.date___time.variation.date_hierarchy.day"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_date___time_variation_date_hierarchy_has_month": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.date___time.variation.date_hierarchy.month"
+                      },
+                      "Subject": {
+                        "Role": "report.date___time.variation.date_hierarchy"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report.date___time.variation.date_hierarchy": {
+                    "Target": {
+                      "Entity": "report.date___time.variation.date_hierarchy"
+                    }
+                  },
+                  "report.date___time.variation.date_hierarchy.month": {
+                    "Target": {
+                      "Entity": "report.date___time.variation.date_hierarchy.month"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_date___time_variation_date_hierarchy_has_quarter": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.date___time.variation.date_hierarchy.quarter"
+                      },
+                      "Subject": {
+                        "Role": "report.date___time.variation.date_hierarchy"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report.date___time.variation.date_hierarchy": {
+                    "Target": {
+                      "Entity": "report.date___time.variation.date_hierarchy"
+                    }
+                  },
+                  "report.date___time.variation.date_hierarchy.quarter": {
+                    "Target": {
+                      "Entity": "report.date___time.variation.date_hierarchy.quarter"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_date___time_variation_date_hierarchy_has_year": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.date___time.variation.date_hierarchy.year"
+                      },
+                      "Subject": {
+                        "Role": "report.date___time.variation.date_hierarchy"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report.date___time.variation.date_hierarchy": {
+                    "Target": {
+                      "Entity": "report.date___time.variation.date_hierarchy"
+                    }
+                  },
+                  "report.date___time.variation.date_hierarchy.year": {
+                    "Target": {
+                      "Entity": "report.date___time.variation.date_hierarchy.year"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_date___time_variation_date_hierarchy_month_has_report_date___time_variation_date_hierarchy_day": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.date___time.variation.date_hierarchy.day"
+                      },
+                      "Subject": {
+                        "Role": "report.date___time.variation.date_hierarchy.month"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.date___time.variation.date_hierarchy.month"
+                      },
+                      "Subject": {
+                        "Role": "report.date___time.variation.date_hierarchy.day"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Preposition": {
+                      "Object": {
+                        "Role": "report.date___time.variation.date_hierarchy.month"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {}
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "report.date___time.variation.date_hierarchy.day"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report.date___time.variation.date_hierarchy.day": {
+                    "Target": {
+                      "Entity": "report.date___time.variation.date_hierarchy.day"
+                    }
+                  },
+                  "report.date___time.variation.date_hierarchy.month": {
+                    "Target": {
+                      "Entity": "report.date___time.variation.date_hierarchy.month"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_date___time_variation_date_hierarchy_quarter_has_report_date___time_variation_date_hierarchy_month": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.date___time.variation.date_hierarchy.month"
+                      },
+                      "Subject": {
+                        "Role": "report.date___time.variation.date_hierarchy.quarter"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.date___time.variation.date_hierarchy.quarter"
+                      },
+                      "Subject": {
+                        "Role": "report.date___time.variation.date_hierarchy.month"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Preposition": {
+                      "Object": {
+                        "Role": "report.date___time.variation.date_hierarchy.quarter"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {}
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "report.date___time.variation.date_hierarchy.month"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report.date___time.variation.date_hierarchy.month": {
+                    "Target": {
+                      "Entity": "report.date___time.variation.date_hierarchy.month"
+                    }
+                  },
+                  "report.date___time.variation.date_hierarchy.quarter": {
+                    "Target": {
+                      "Entity": "report.date___time.variation.date_hierarchy.quarter"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_date___time_variation_date_hierarchy_year_has_report_date___time_variation_date_hierarchy_quarter": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.date___time.variation.date_hierarchy.quarter"
+                      },
+                      "Subject": {
+                        "Role": "report.date___time.variation.date_hierarchy.year"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.date___time.variation.date_hierarchy.year"
+                      },
+                      "Subject": {
+                        "Role": "report.date___time.variation.date_hierarchy.quarter"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Preposition": {
+                      "Object": {
+                        "Role": "report.date___time.variation.date_hierarchy.year"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {}
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "report.date___time.variation.date_hierarchy.quarter"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report.date___time.variation.date_hierarchy.quarter": {
+                    "Target": {
+                      "Entity": "report.date___time.variation.date_hierarchy.quarter"
+                    }
+                  },
+                  "report.date___time.variation.date_hierarchy.year": {
+                    "Target": {
+                      "Entity": "report.date___time.variation.date_hierarchy.year"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_has_american_southwest_sightings": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.american_southwest_sightings"
+                      },
+                      "Subject": {
+                        "Role": "report"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report": {
+                    "Target": {
+                      "Entity": "report"
+                    }
+                  },
+                  "report.american_southwest_sightings": {
+                    "Target": {
+                      "Entity": "report.american_southwest_sightings"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_has_city": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.city"
+                      },
+                      "Subject": {
+                        "Role": "report"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report": {
+                    "Target": {
+                      "Entity": "report"
+                    }
+                  },
+                  "report.city": {
+                    "Target": {
+                      "Entity": "report.city"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_has_date___time": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.date___time"
+                      },
+                      "Subject": {
+                        "Role": "report"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report": {
+                    "Target": {
+                      "Entity": "report"
+                    }
+                  },
+                  "report.date___time": {
+                    "Target": {
+                      "Entity": "report.date___time"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_has_duration": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.duration"
+                      },
+                      "Subject": {
+                        "Role": "report"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report": {
+                    "Target": {
+                      "Entity": "report"
+                    }
+                  },
+                  "report.duration": {
+                    "Target": {
+                      "Entity": "report.duration"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_has_in_american_southwest": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.in_american_southwest"
+                      },
+                      "Subject": {
+                        "Role": "report"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report": {
+                    "Target": {
+                      "Entity": "report"
+                    }
+                  },
+                  "report.in_american_southwest": {
+                    "Target": {
+                      "Entity": "report.in_american_southwest"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_has_location": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.location"
+                      },
+                      "Subject": {
+                        "Role": "report"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report": {
+                    "Target": {
+                      "Entity": "report"
+                    }
+                  },
+                  "report.location": {
+                    "Target": {
+                      "Entity": "report.location"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_has_posted": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.posted"
+                      },
+                      "Subject": {
+                        "Role": "report"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report": {
+                    "Target": {
+                      "Entity": "report"
+                    }
+                  },
+                  "report.posted": {
+                    "Target": {
+                      "Entity": "report.posted"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_has_shape": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.shape"
+                      },
+                      "Subject": {
+                        "Role": "report"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report": {
+                    "Target": {
+                      "Entity": "report"
+                    }
+                  },
+                  "report.shape": {
+                    "Target": {
+                      "Entity": "report.shape"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_has_shape_groups": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.shape_groups"
+                      },
+                      "Subject": {
+                        "Role": "report"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report": {
+                    "Target": {
+                      "Entity": "report"
+                    }
+                  },
+                  "report.shape_groups": {
+                    "Target": {
+                      "Entity": "report.shape_groups"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_has_state": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.state"
+                      },
+                      "Subject": {
+                        "Role": "report"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report": {
+                    "Target": {
+                      "Entity": "report"
+                    }
+                  },
+                  "report.state": {
+                    "Target": {
+                      "Entity": "report.state"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_has_summary": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.summary"
+                      },
+                      "Subject": {
+                        "Role": "report"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report": {
+                    "Target": {
+                      "Entity": "report"
+                    }
+                  },
+                  "report.summary": {
+                    "Target": {
+                      "Entity": "report.summary"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_has_suspected_hoax": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.suspected_hoax"
+                      },
+                      "Subject": {
+                        "Role": "report"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report": {
+                    "Target": {
+                      "Entity": "report"
+                    }
+                  },
+                  "report.suspected_hoax": {
+                    "Target": {
+                      "Entity": "report.suspected_hoax"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_has_suspected_hoax1": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.suspected_hoax1"
+                      },
+                      "Subject": {
+                        "Role": "report"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report": {
+                    "Target": {
+                      "Entity": "report"
+                    }
+                  },
+                  "report.suspected_hoax1": {
+                    "Target": {
+                      "Entity": "report.suspected_hoax1"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_has_total_sightings": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.total_sightings"
+                      },
+                      "Subject": {
+                        "Role": "report"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report": {
+                    "Target": {
+                      "Entity": "report"
+                    }
+                  },
+                  "report.total_sightings": {
+                    "Target": {
+                      "Entity": "report.total_sightings"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_in_city": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Preposition": {
+                      "Object": {
+                        "Role": "report.city"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {}
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "report"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report": {
+                    "Target": {
+                      "Entity": "report"
+                    }
+                  },
+                  "report.city": {
+                    "Target": {
+                      "Entity": "report.city"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "report.city"
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_in_location": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Preposition": {
+                      "Object": {
+                        "Role": "report.location"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {}
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "report"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report": {
+                    "Target": {
+                      "Entity": "report"
+                    }
+                  },
+                  "report.location": {
+                    "Target": {
+                      "Entity": "report.location"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "report.location"
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_in_state": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Preposition": {
+                      "Object": {
+                        "Role": "report.state"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {}
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "report"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report": {
+                    "Target": {
+                      "Entity": "report"
+                    }
+                  },
+                  "report.state": {
+                    "Target": {
+                      "Entity": "report.state"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "report.state"
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_is_posted_on_posted": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "State": "Generated",
+                    "Verb": {
+                      "Object": {
+                        "Role": "report"
+                      },
+                      "Verbs": [
+                        {
+                          "post": {}
+                        }
+                      ]
+                    },
+                    "Weight": 0.9
+                  }
+                ],
+                "Roles": {
+                  "report": {
+                    "Target": {
+                      "Entity": "report"
+                    }
+                  },
+                  "report.posted": {
+                    "Target": {
+                      "Entity": "report.posted"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "When": {
+                    "Role": "report.posted"
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_posted_has_variation_date_hierarchy": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.posted.variation.date_hierarchy"
+                      },
+                      "Subject": {
+                        "Role": "report.posted"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report.posted": {
+                    "Target": {
+                      "Entity": "report.posted"
+                    }
+                  },
+                  "report.posted.variation.date_hierarchy": {
+                    "Target": {
+                      "Entity": "report.posted.variation.date_hierarchy"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_posted_variation_date_hierarchy_has_day": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.posted.variation.date_hierarchy.day"
+                      },
+                      "Subject": {
+                        "Role": "report.posted.variation.date_hierarchy"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report.posted.variation.date_hierarchy": {
+                    "Target": {
+                      "Entity": "report.posted.variation.date_hierarchy"
+                    }
+                  },
+                  "report.posted.variation.date_hierarchy.day": {
+                    "Target": {
+                      "Entity": "report.posted.variation.date_hierarchy.day"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_posted_variation_date_hierarchy_has_month": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.posted.variation.date_hierarchy.month"
+                      },
+                      "Subject": {
+                        "Role": "report.posted.variation.date_hierarchy"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report.posted.variation.date_hierarchy": {
+                    "Target": {
+                      "Entity": "report.posted.variation.date_hierarchy"
+                    }
+                  },
+                  "report.posted.variation.date_hierarchy.month": {
+                    "Target": {
+                      "Entity": "report.posted.variation.date_hierarchy.month"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_posted_variation_date_hierarchy_has_quarter": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.posted.variation.date_hierarchy.quarter"
+                      },
+                      "Subject": {
+                        "Role": "report.posted.variation.date_hierarchy"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report.posted.variation.date_hierarchy": {
+                    "Target": {
+                      "Entity": "report.posted.variation.date_hierarchy"
+                    }
+                  },
+                  "report.posted.variation.date_hierarchy.quarter": {
+                    "Target": {
+                      "Entity": "report.posted.variation.date_hierarchy.quarter"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "report_posted_variation_date_hierarchy_has_year": {
+                "Binding": {
+                  "ConceptualEntity": "reports"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "report.posted.variation.date_hierarchy.year"
+                      },
+                      "Subject": {
+                        "Role": "report.posted.variation.date_hierarchy"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "report.posted.variation.date_hierarchy": {
+                    "Target": {
+                      "Entity": "report.posted.variation.date_hierarchy"
+                    }
+                  },
+                  "report.posted.variation.date_hierarchy.year": {
+                    "Target": {
+                      "Entity": "report.posted.variation.date_hierarchy.year"
+                    }
+                  }
+                },
+                "State": "Generated"
+              }
+            },
+            "Version": "2.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "fastCombine": true,
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "reportData",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Function"
+          }
+        ],
+        "expression": [
+          "(reportDate) =>",
+          "let",
+          "    Source = Web.Page(Web.Contents(\"http://www.nuforc.org/webreports/ndxp\" & Text.From(reportDate) & \".html\")),",
+          "    Data0 = Source{0}[Data],",
+          "    #\"Changed Type\" = Table.TransformColumnTypes(Data0,{{\"Date / Time\", type text}, {\"City\", type text}, {\"State\", type text}, {\"Shape\", type text}, {\"Duration\", type text}, {\"Summary\", type text}, {\"Posted\", type date}})",
+          "in",
+          "    #\"Changed Type\""
+        ],
+        "kind": "m",
+        "lineageTag": "b716566e-54d0-4d1c-86ba-687210430ee4"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "68479612-ddb3-4881-9872-f3c1e3075beb",
+        "fromColumn": "Date / Time",
+        "fromTable": "reports",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_1b2305d7-dde9-47fe-bd31-6ffafced70f1"
+      },
+      {
+        "name": "a30fb0b2-a6ca-40d9-83e5-9bbbc2d491c9",
+        "fromColumn": "Posted",
+        "fromTable": "reports",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_c68c6a8b-6805-4017-bad6-006a0359bfe1"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "DateTableTemplate_ffd1e0c2-e2e1-48a7-a381-4c50ccf73765",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "ed243613-3f91-40d6-a83a-70a345b021ea",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              },
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "b0f1f734-0fbf-4598-9821-4ca4fd3c913b",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              },
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "33a57818-8d1e-4b9c-b351-bed6626e55eb",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              },
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "fd1541a6-bcbc-4b40-bb43-081792b4f1ed",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              },
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "81df138d-c83e-4daa-b126-f7c99338d828",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              },
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "78e00064-d540-45d1-9d50-ebd6ee7d25b7",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              },
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "5ad1b6e5-df7b-4aa9-9b62-cbc4daf7aae7",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "78804cb3-f57a-425f-9834-c04a837ace7f",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "ab3c6f8a-d630-4787-bfb5-26321b375c71",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "88dfec9d-d6c1-48e2-9172-f669821883d4",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "86f27118-0be5-40f9-86df-90c40c00202f",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "fd3ce8e9-9f1d-4331-8be0-96c1f673ad5e"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "ee7b3df9-7026-4be2-a8e3-de9c4a83a7b4",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_ffd1e0c2-e2e1-48a7-a381-4c50ccf73765-c4d7f2ad-bf1c-466d-881c-5443156e4af5",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "reports",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date / Time",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "e776b501-b3ca-4e3c-9d75-ad0e311c6a2d",
+            "sourceColumn": "Date / Time",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_1b2305d7-dde9-47fe-bd31-6ffafced70f1"
+                },
+                "isDefault": true,
+                "relationship": "68479612-ddb3-4881-9872-f3c1e3075beb"
+              }
+            ]
+          },
+          {
+            "name": "City",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0bdfffd8-4c0b-4f9e-90ee-18f9c33ed029",
+            "sourceColumn": "City",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "State",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "593ea278-5366-42a0-a0af-fd8d10e93542",
+            "sourceColumn": "State",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Shape",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "__PBI_SemanticLinks",
+                "value": "[{\"LinkTarget\":{\"TableName\":\"reports\",\"TableItemName\":\"Shape (groups)\",\"ObjectType\":4},\"LinkType\":\"UsedInGroup\"}]"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3e73ff9e-b5c4-4ed2-8f37-a5b3e1dd3365",
+            "sourceColumn": "Shape",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Duration",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "53a33c94-7ef0-49e3-876c-ab7a1698727b",
+            "sourceColumn": "Duration",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Summary",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "68b31839-bee8-4199-9eb2-81b097d203ea",
+            "sourceColumn": "Summary",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Posted",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "mm/dd/yyyy",
+            "lineageTag": "10f4c218-63f5-46c7-b205-dd87bff31d52",
+            "sourceColumn": "Posted",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_c68c6a8b-6805-4017-bad6-006a0359bfe1"
+                },
+                "isDefault": true,
+                "relationship": "a30fb0b2-a6ca-40d9-83e5-9bbbc2d491c9"
+              }
+            ]
+          },
+          {
+            "name": "Location",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "dfa2f16b-6288-4912-a69b-b7aa5d74016f",
+            "sourceColumn": "Location",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Shape (groups)",
+            "annotations": [
+              {
+                "name": "GroupingDesignState",
+                "value": "{\"Version\":0,\"Sources\":[{\"Name\":\"r\",\"Entity\":\"reports\"}],\"GroupedColumns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Shape\"}}],\"GroupItems\":[{\"DisplayName\":\"(Blank)\",\"BlankDefaultPlaceholder\":true},{\"DisplayName\":\"Unknown\",\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Shape\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"''\"}}],[{\"Literal\":{\"Value\":\"'Other'\"}}],[{\"Literal\":{\"Value\":\"'Unknown'\"}}]]}}}]}"
+              },
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": [
+              "SWITCH(",
+              "  TRUE,",
+              "  ISBLANK('reports'[Shape]),",
+              "  \"(Blank)\",",
+              "  'reports'[Shape] IN {\"\",",
+              "    \"Other\",",
+              "    \"Unknown\"},",
+              "  \"Unknown\",",
+              "  'reports'[Shape]",
+              ")"
+            ],
+            "extendedProperties": [
+              {
+                "name": "GroupingMetadata",
+                "type": "json",
+                "value": {
+                  "groupedColumns": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "reports"
+                          }
+                        },
+                        "Property": "Shape"
+                      }
+                    }
+                  ],
+                  "version": 0
+                }
+              }
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "6310793a-acf4-4b56-8b14-95f7dcf0d8db",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "lineageTag": "6d4afca8-cf7c-40bb-9975-851c9f8c3596",
+        "measures": [
+          {
+            "name": "Total Sightings",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "displayFolder": "Measures",
+            "expression": "COUNTA(reports[Posted])",
+            "formatString": "#,0",
+            "lineageTag": "975b0810-cb5f-4e94-bfb2-129c3bfc14fe"
+          },
+          {
+            "name": "Suspected Hoax",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "displayFolder": "Measures",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    [Total Sightings],",
+              "    CONTAINSSTRING(reports[Summary], \"oax\"))"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "8bfb1345-85b2-45ec-85c5-78992a133e6b"
+          },
+          {
+            "name": "American Southwest Sightings",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "displayFolder": "Measures",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    [Total Sightings],",
+              "    reports[State] = \"CO\" ||",
+              "    reports[State] = \"NM\" ||",
+              "    reports[State] = \"AZ\"||",
+              "    reports[State] = \"CA\" ||",
+              "    reports[State] = \"TX\" ||",
+              "    reports[State] = \"UT\")",
+              ""
+            ],
+            "formatString": "#,0",
+            "lineageTag": "249c29db-018c-4185-9b5f-0086404666bc"
+          },
+          {
+            "name": "% in American Southwest",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "displayFolder": "Measures",
+            "expression": [
+              "",
+              "DIVIDE([American Southwest Sightings], [Total Sightings], 0)"
+            ],
+            "formatString": "0%;-0%;0%",
+            "lineageTag": "0fb1706b-2b73-4f2d-932e-c32cea44f04b"
+          },
+          {
+            "name": "% suspected hoax",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "displayFolder": "Measures",
+            "expression": [
+              "",
+              "DIVIDE([Suspected Hoax], [Total Sightings], 0)"
+            ],
+            "formatString": "0%;-0%;0%",
+            "lineageTag": "8949f1bc-df59-4ad9-be6e-6af4a5d324da"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "reports-3670db05-c211-437e-8da4-60fe97c00447",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    // The source step gets data from this URL.",
+                "    Source = Web.Page(Web.Contents(\"http://www.nuforc.org/webreports/ndxpost.html\")),",
+                "    Data0 = Source{0}[Data],",
+                "    ChangedType = Table.TransformColumnTypes(Data0,{{\"Reports\", type date}, {\"Count\", Int64.Type}}),",
+                "    AddedDateasText = Table.AddColumn(ChangedType, \"DateText\", each Date.ToText([Reports], \"yyMMdd\"), type text),",
+                "    RenamedReports = Table.RenameColumns(AddedDateasText,{{\"Reports\", \"ReportDate\"}}),",
+                "    FilteredtoLast5Years = Table.SelectRows(RenamedReports, each Date.IsInPreviousNYears([ReportDate], 5)),",
+                "    // The custom function uses the date from the DateText column to pull back reportData from the URL for each date in the ReprotDate column.",
+                "    #\"Invoked Custom Function\" = Table.AddColumn(FilteredtoLast5Years, \"reportData\", each reportData([DateText])),",
+                "    RemovedErrors = Table.RemoveRowsWithErrors(#\"Invoked Custom Function\", {\"reportData\"}),",
+                "    KeptReportData = Table.RemoveColumns(RemovedErrors,{\"ReportDate\", \"Count\", \"DateText\"}),",
+                "    ExpandedreportData = Table.ExpandTableColumn(KeptReportData, \"reportData\", {\"Date / Time\", \"City\", \"State\", \"Shape\", \"Duration\", \"Summary\", \"Posted\"}, {\"Date / Time\", \"City\", \"State\", \"Shape\", \"Duration\", \"Summary\", \"Posted\"}),",
+                "    ChangedDateTimeType = Table.TransformColumnTypes(ExpandedreportData,{{\"Date / Time\", type datetime}, {\"City\", type text}, {\"State\", type text}, {\"Shape\", type text}, {\"Posted\", type date}}),",
+                "    RemovedDateTimeErrors = Table.RemoveRowsWithErrors(ChangedDateTimeType, {\"Date / Time\"}),",
+                "    RemoveBlankDates = Table.SelectRows(RemovedDateTimeErrors, each [#\"Date / Time\"] <> null and [#\"Date / Time\"] <> \"\"),",
+                "    AddedLocation = Table.AddColumn(RemoveBlankDates, \"Location\", each if [State] <> \"\" then [City] & \", \" & [State] else [City])",
+                "in",
+                "    AddedLocation"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_1b2305d7-dde9-47fe-bd31-6ffafced70f1",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "80423b21-7f25-458e-9a90-9708b71bf5ae",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              },
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "bc0fde18-e52a-4e8d-b75e-e9fc46928ecf",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              },
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "3c81fd4d-c5ee-46a6-8ece-fce9757873cc",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              },
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "94bd37b2-64cb-45cf-b2c6-1e5465e4a6e2",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              },
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "6946a7ca-a56d-47ba-a4da-99a6aafb2540",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              },
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "389d1485-6daa-434e-9947-ce892786f16c",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              },
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "ce1570a8-77a3-4def-ad8e-cc68dbad9635",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "30f21a0e-9a7b-4c3b-9345-8097ddd9d7b3",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "4c89bde1-ad62-4f35-8bfa-7a9d3d76fb72",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "8c6f0c96-a584-412f-9188-87e01b32834f",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "be50f242-f1c9-4a88-821b-7f9a81f318e6",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "c7d701c6-3627-4eed-ac90-ec79cdbbe0e5"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "d9b91096-c49c-46db-a079-094c3d78a58e",
+        "partitions": [
+          {
+            "name": "LocalDateTable_1b2305d7-dde9-47fe-bd31-6ffafced70f1-872f877f-94d6-46c7-bfd2-afcb0950bd5a",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('reports'[Date / Time])), 1, 1), Date(Year(MAX('reports'[Date / Time])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "LocalDateTable_c68c6a8b-6805-4017-bad6-006a0359bfe1",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "31654ecc-0023-4a80-b44a-1e08d8fddc5e",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              },
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "b5e25fb7-344b-4de9-b3ed-4852b4aa98ec",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              },
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "866c9580-ef38-47a8-b967-571bab4a3872",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              },
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "39fc6416-0714-445f-97a3-b12c4d2d7eb1",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              },
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "7469ffbc-d5a3-46c6-9e9a-58edfe9edb9c",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              },
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "f7db9d4c-4b5f-4071-a6ef-6404066f26ee",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              },
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "ebf5771c-cdf5-4bd7-9ae6-484b84623a07",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "7e99683d-c134-45af-aa6c-c7f052120161",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "3e92cea2-1696-41dc-b020-3190f3d04b15",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "70b94b54-12f9-4cfc-a671-37a4e4ac63a6",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "fe0a80cb-af1c-4acd-9b3b-32af9b13ca9d",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "1c77477c-5bc9-4c6b-ab6f-35920cbc4fae"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "0e851c9a-4772-47e4-bba7-08d4c2817763",
+        "partitions": [
+          {
+            "name": "LocalDateTable_c68c6a8b-6805-4017-bad6-006a0359bfe1-a4a43c7e-d834-4ef1-b804-b385260a9acd",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('reports'[Posted])), 1, 1), Date(Year(MAX('reports'[Posted])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      }
+    ]
+  }
+}
