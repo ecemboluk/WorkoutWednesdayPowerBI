@@ -1,0 +1,929 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"conference_dim\",\"finances_fact\",\"school_dim\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.123.684.0 (23.11)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "1d5a5ddf-8a16-4150-818c-68c9a39df1b3",
+        "fromColumn": "FBS Conference",
+        "fromTable": "finances_fact",
+        "toColumn": "FBS Conference",
+        "toTable": "conference_dim"
+      },
+      {
+        "name": "2c646dfd-ff64-4d6d-93af-1060db4ae89a",
+        "fromColumn": "IPEDS ID",
+        "fromTable": "finances_fact",
+        "toColumn": "IPEDS ID",
+        "toTable": "school_dim"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "conference_dim",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "FBS Conference",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fe6225e7-7c05-40c0-99b8-ac46eec15a2f",
+            "sourceColumn": "FBS Conference",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Conference Abb",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c6f615e7-5c54-4fc5-a34b-7ec8faab99ba",
+            "sourceColumn": "Conference Abb",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "7b3bc05d-4d3c-4898-9b56-51d6a63e9037",
+        "partitions": [
+          {
+            "name": "conference_dim",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Excel.Workbook(File.Contents(\"C:\\Users\\EcemBoluk\\Downloads\\NCAA Profit and Losses (1).xlsx\"), null, true),",
+                "    conference_dim_Sheet = Source{[Item=\"conference_dim\",Kind=\"Sheet\"]}[Data],",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(conference_dim_Sheet,{{\"Column1\", type text}, {\"Column2\", type text}}),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"Changed Type\", [PromoteAllScalars=true]),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"FBS Conference\", type text}, {\"Conference Abb\", type text}})",
+                "in",
+                "    #\"Changed Type1\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_1ba4f3a5-2f2a-444f-9b45-b5a8e7e1d24e",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "ef1202a3-6a8a-4794-bf28-588913e4e133",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "ed83f959-0391-449b-bf6e-fc1e795f4d82",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "0160a761-53e2-435a-85ca-9fae740e1209",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "d5282f0b-4ba7-46d9-b932-57356cabd4bf",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "70c00c64-b01c-4112-9eaf-45d1354f3735",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "15be3243-145e-4bb3-ab46-2aec2513c12d",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "026027c0-5995-48e0-ba44-c10b7ba8b853",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "5ee7298d-cee4-42b2-9f20-a74bce61d51e",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "c48eca2b-7d54-457f-8457-952370947c60",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "4a15c253-791d-485c-a9e9-9d81aa5d9a24",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "b576127a-6b99-4fd2-9ce9-72ec87cea396",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "c3b7e121-6068-459c-96cf-de102138925e"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "899cd904-5488-47a9-b5f2-473fe380e73f",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_1ba4f3a5-2f2a-444f-9b45-b5a8e7e1d24e",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "finances_fact",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "IPEDS ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ef2ddb8a-97b2-4ed7-adfe-e074a0a882c0",
+            "sourceColumn": "IPEDS ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "0f560639-db3b-4e54-84a6-d85acc447401",
+            "sourceColumn": "Year",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "NCAA Subdivision",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4c0a2f94-6264-49e7-a10f-3e57cb83cd71",
+            "sourceColumn": "NCAA Subdivision",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FBS Conference",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "333f3ec9-d7f9-45b8-9d9e-51065614f769",
+            "sourceColumn": "FBS Conference",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Total Expenses",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "08e495c5-5909-4784-84ff-f4740dce6290",
+            "sourceColumn": "Total Expenses",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Excess Transfers Back",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "2637a6a2-fd6b-47af-9b59-9f88a8f7b176",
+            "sourceColumn": "Excess Transfers Back",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Other Expenses",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "692e9dae-5ffe-4206-9018-ed0519bf6107",
+            "sourceColumn": "Other Expenses",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Medical",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "b70df3cb-61be-48dc-a788-5ea44ef9df67",
+            "sourceColumn": "Medical",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Competition Guarantees",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "def564da-314f-4e55-aaf9-2a0d04c45653",
+            "sourceColumn": "Competition Guarantees",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Recruiting",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "79ef26cc-e5bf-4875-920d-b1fe55a3032f",
+            "sourceColumn": "Recruiting",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Game Expenses and Travel",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "a5fb4a2e-a178-4589-9e05-0047906b9452",
+            "sourceColumn": "Game Expenses and Travel",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Facilities and Equipment",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "829d5913-0ce5-4db0-912c-27cd4b39250c",
+            "sourceColumn": "Facilities and Equipment",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Coaches Compensation",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "db2f6991-f61a-426f-af94-21b7a12d3b97",
+            "sourceColumn": "Coaches Compensation",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Support and Admin Compensation w/Severance",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "d7e86c10-75cd-4750-a732-6975ff49af60",
+            "sourceColumn": "Support and Admin Compensation w/Severance",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Athletic Student Aid",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "75e0b8db-828e-417c-884b-ec6baf6bfefa",
+            "sourceColumn": "Athletic Student Aid",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Revenues",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "eea735ee-9074-43f0-8206-dd54eb8f7faf",
+            "sourceColumn": "Total Revenues",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Other Revenue",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "14919b92-0197-44b3-b59b-7d2bb0fe3e61",
+            "sourceColumn": "Other Revenue",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Corporate Sponsorship, Advertising, Licensing",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "aca5e4d4-4718-47f2-bbfe-43dc500553eb",
+            "sourceColumn": "Corporate Sponsorship, Advertising, Licensing",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Donor Contributions",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "cf54077d-8684-4055-b574-254223a66b61",
+            "sourceColumn": "Donor Contributions",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Competition Guarantees_1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "dc2b228e-243a-47eb-a150-8c29db675b06",
+            "sourceColumn": "Competition Guarantees_1",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "NCAA/Conference Distributions, Media Rights, and Post-Season Football",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "8352a0c3-8f59-46e9-b94b-01c32594685e",
+            "sourceColumn": "NCAA/Conference Distributions, Media Rights, and Post-Season Football",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Ticket Sales",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "4d0e7fda-5099-4f4e-b492-08dd7cea9ea4",
+            "sourceColumn": "Ticket Sales",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Institutional/Government Support",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "c51a54ed-c1f7-42f3-851a-196eba6125d1",
+            "sourceColumn": "Institutional/Government Support",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Student Fees",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "ea73ceb9-3c55-4b43-aab4-4568bae7382a",
+            "sourceColumn": "Student Fees",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Academic Spending (University-Wide)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "f9464801-2a38-461c-b9ee-0b7b800a209b",
+            "sourceColumn": "Total Academic Spending (University-Wide)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Football Spending",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "c20909d2-20d7-48e4-b028-57fe494eba39",
+            "sourceColumn": "Total Football Spending",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Football Coaching Salaries",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "6693964c-49b1-411f-ad38-5134dded52fa",
+            "sourceColumn": "Total Football Coaching Salaries",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Athletics Related Debt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "a481ab0d-9527-42b4-af28-f462fa2c5005",
+            "sourceColumn": "Athletics Related Debt",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Annual Debt Service, Leases and Rental Fees on Athletic Facilities",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "6fc3ca05-4767-47e1-b0d4-82d76e3d3f62",
+            "sourceColumn": "Annual Debt Service, Leases and Rental Fees on Athletic Facilities",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Profit",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "118a6b57-ebf7-4e36-99fb-e26dab2800af",
+            "sourceColumn": "Total Profit",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "fc9a97a4-0968-40a3-851e-c70e181f1db9",
+        "partitions": [
+          {
+            "name": "finances_fact",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Excel.Workbook(File.Contents(\"C:\\Users\\EcemBoluk\\Downloads\\NCAA Profit and Losses (1).xlsx\"), null, true),",
+                "    finances_fact_Sheet = Source{[Item=\"finances_fact\",Kind=\"Sheet\"]}[Data],",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(finances_fact_Sheet, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"IPEDS ID\", Int64.Type}, {\"Year\", Int64.Type}, {\"NCAA Subdivision\", type text}, {\"FBS Conference\", type text}, {\"Total Expenses\", type number}, {\"Excess Transfers Back\", Int64.Type}, {\"Other Expenses\", type number}, {\"Medical\", type number}, {\"Competition Guarantees\", type number}, {\"Recruiting\", type number}, {\"Game Expenses and Travel\", type number}, {\"Facilities and Equipment\", type number}, {\"Coaches Compensation\", type number}, {\"Support and Admin Compensation w/Severance\", type number}, {\"Athletic Student Aid\", type number}, {\"Total Revenues\", type number}, {\"Other Revenue\", type number}, {\"Corporate Sponsorship, Advertising, Licensing\", type number}, {\"Donor Contributions\", type number}, {\"Competition Guarantees_1\", Int64.Type}, {\"NCAA/Conference Distributions, Media Rights, and Post-Season Football\", type number}, {\"Ticket Sales\", type number}, {\"Institutional/Government Support\", type number}, {\"Student Fees\", type number}, {\"Total Academic Spending (University-Wide)\", type number}, {\"Total Football Spending\", type number}, {\"Total Football Coaching Salaries\", type number}, {\"Athletics Related Debt\", type number}, {\"Annual Debt Service, Leases and Rental Fees on Athletic Facilities\", type number}}),",
+                "    #\"Added Custom\" = Table.AddColumn(#\"Changed Type\", \"Total Profit\", each ([Total Revenues]-[Total Expenses])+[Excess Transfers Back]),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Added Custom\",{{\"Total Profit\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type1\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "school_dim",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "IPEDS ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "26409777-9b42-4611-8b17-4d18265d0032",
+            "sourceColumn": "IPEDS ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "School",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2dc065ce-354a-41bf-897c-772d12603b42",
+            "sourceColumn": "School",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "School Abb",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "09b6cbcc-2b45-433a-ac89-4f41609fcb6d",
+            "sourceColumn": "School Abb",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "9a31391a-688f-430e-9805-858da6dd1695",
+        "partitions": [
+          {
+            "name": "school_dim",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Excel.Workbook(File.Contents(\"C:\\Users\\EcemBoluk\\Downloads\\NCAA Profit and Losses (1).xlsx\"), null, true),",
+                "    school_dim_Sheet = Source{[Item=\"school_dim\",Kind=\"Sheet\"]}[Data],",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(school_dim_Sheet, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"IPEDS ID\", Int64.Type}, {\"School\", type text}, {\"School Abb\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "config": "{\"version\":\"5.49\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU11\",\"version\":\"5.49\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "ReportSection1f2c6a6a359e4cf9f283",
+      "config": "{}",
+      "name": "Pod",
+      "parameters": "[{\"name\":\"Param_Filter1b5eac21b5e246983ef3\",\"boundFilter\":\"Filter1b5eac21b5e246983ef3\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"conference_dim\"}},\"Property\":\"Conference Abb\"}}}]",
+      "type": 1
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU11",
+            "path": "BaseThemes/CY23SU11.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"relationships\":[{\"source\":\"687fc359e91014028be5\",\"target\":\"f5358841a1cef9261ed6\",\"type\":3},{\"source\":\"687fc359e91014028be5\",\"target\":\"b0c755dde5e593142749\",\"type\":3},{\"source\":\"687fc359e91014028be5\",\"target\":\"d9637ba7a4185c3940c9\",\"type\":3},{\"source\":\"3dc301be8060b2d004d9\",\"target\":\"0f161d16db1b57157512\",\"type\":3},{\"source\":\"3dc301be8060b2d004d9\",\"target\":\"fb216b01c968a4536ee0\",\"type\":3},{\"source\":\"0f161d16db1b57157512\",\"target\":\"3dc301be8060b2d004d9\",\"type\":3},{\"source\":\"0f161d16db1b57157512\",\"target\":\"fb216b01c968a4536ee0\",\"type\":3},{\"source\":\"fb216b01c968a4536ee0\",\"target\":\"0f161d16db1b57157512\",\"type\":3},{\"source\":\"fb216b01c968a4536ee0\",\"target\":\"3dc301be8060b2d004d9\",\"type\":3},{\"source\":\"fb216b01c968a4536ee0\",\"target\":\"afe5b7479dacfa747823\",\"type\":3},{\"source\":\"fb216b01c968a4536ee0\",\"target\":\"b0c755dde5e593142749\",\"type\":3},{\"source\":\"fb216b01c968a4536ee0\",\"target\":\"b03bc7f61e65b31f6b33\",\"type\":3},{\"source\":\"fb216b01c968a4536ee0\",\"target\":\"f5358841a1cef9261ed6\",\"type\":3},{\"source\":\"0f161d16db1b57157512\",\"target\":\"b03bc7f61e65b31f6b33\",\"type\":3},{\"source\":\"0f161d16db1b57157512\",\"target\":\"f5358841a1cef9261ed6\",\"type\":3},{\"source\":\"0f161d16db1b57157512\",\"target\":\"687fc359e91014028be5\",\"type\":1},{\"source\":\"0f161d16db1b57157512\",\"target\":\"d9637ba7a4185c3940c9\",\"type\":3},{\"source\":\"3dc301be8060b2d004d9\",\"target\":\"687fc359e91014028be5\",\"type\":1},{\"source\":\"3dc301be8060b2d004d9\",\"target\":\"d9637ba7a4185c3940c9\",\"type\":3},{\"source\":\"3dc301be8060b2d004d9\",\"target\":\"afe5b7479dacfa747823\",\"type\":3},{\"source\":\"3dc301be8060b2d004d9\",\"target\":\"b0c755dde5e593142749\",\"type\":3},{\"source\":\"3dc301be8060b2d004d9\",\"target\":\"dfd334fdec2910f31c7c\",\"type\":3},{\"source\":\"0f161d16db1b57157512\",\"target\":\"dfd334fdec2910f31c7c\",\"type\":3},{\"source\":\"687fc359e91014028be5\",\"target\":\"fb216b01c968a4536ee0\",\"type\":1}]}",
+      "displayName": "Conference Abb",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter862230faf84a59eb8998\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"conference_dim\"}},\"Property\":\"Conference Abb\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"conference_dim\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Conference Abb\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}]",
+      "height": 900.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0f161d16db1b57157512\",\"layouts\":[{\"id\":0,\"position\":{\"x\":417.14770797962643,\"y\":498.13242784380304,\"z\":5000,\"width\":356.0271646859083,\"height\":374.36332767402376,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"conference_dim.Conference Abb\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(finances_fact.Total Expenses)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"conference_dim\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"finances_fact\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Conference Abb\"},\"Name\":\"conference_dim.Conference Abb\",\"NativeReferenceName\":\"Conference Abb\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Expenses\"}},\"Function\":0},\"Name\":\"Sum(finances_fact.Total Expenses)\",\"NativeReferenceName\":\"Sum of Total Expenses\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Expenses\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#272F67'\"}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Conference'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 374.36,
+          "width": 356.03,
+          "x": 417.15,
+          "y": 498.13,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"3b04672927473023b918\",\"layouts\":[{\"id\":0,\"position\":{\"x\":796.0950764006791,\"y\":100.84889643463497,\"z\":6000,\"width\":354,\"height\":135.9932088285229,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(finances_fact.Total Profit)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"finances_fact\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Profit\"}},\"Function\":0},\"Name\":\"Sum(finances_fact.Total Profit)\",\"NativeReferenceName\":\"Total Profit\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Profit\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(finances_fact.Total Profit)\":{\"displayName\":\"Total Profit\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 135.99,
+          "width": 354.00,
+          "x": 796.10,
+          "y": 100.85,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"3dc301be8060b2d004d9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":38.20033955857385,\"y\":498.13242784380304,\"z\":2000,\"width\":354.49915110356534,\"height\":374.36332767402376,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"conference_dim.Conference Abb\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(finances_fact.Total Revenues)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"conference_dim\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"finances_fact\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Conference Abb\"},\"Name\":\"conference_dim.Conference Abb\",\"NativeReferenceName\":\"Conference Abb\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Revenues\"}},\"Function\":0},\"Name\":\"Sum(finances_fact.Total Revenues)\",\"NativeReferenceName\":\"Sum of Total Revenues\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Revenues\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#6A98C3'\"}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Conference'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 374.36,
+          "width": 354.50,
+          "x": 38.20,
+          "y": 498.13,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"687fc359e91014028be5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":976.4006791171477,\"y\":13.752122241086587,\"z\":10000,\"width\":210.86587436332766,\"height\":74.87266553480475,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"finances_fact.Year\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"finances_fact\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Year\"},\"Name\":\"finances_fact.Year\",\"NativeReferenceName\":\"Year\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"finances_fact\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Year\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"2008L\"}}]]}}}]}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 74.87,
+          "width": 210.87,
+          "x": 976.40,
+          "y": 13.75,
+          "z": 10000.00
+        },
+        {
+          "config": "{\"name\":\"afe5b7479dacfa747823\",\"layouts\":[{\"id\":0,\"position\":{\"x\":418.6757215619694,\"y\":100.84889643463497,\"z\":3000,\"width\":354.49915110356534,\"height\":135.9932088285229,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(finances_fact.Total Expenses)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"finances_fact\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Expenses\"}},\"Function\":0},\"Name\":\"Sum(finances_fact.Total Expenses)\",\"NativeReferenceName\":\"Total Expenses\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Expenses\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(finances_fact.Total Expenses)\":{\"displayName\":\"Total Expenses\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 135.99,
+          "width": 354.50,
+          "x": 418.68,
+          "y": 100.85,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"b03bc7f61e65b31f6b33\",\"layouts\":[{\"id\":0,\"position\":{\"x\":39.7283531409168,\"y\":100.84889643463497,\"z\":0,\"width\":354.49915110356534,\"height\":135.9932088285229,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(finances_fact.Total Revenues)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"finances_fact\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Revenues\"}},\"Function\":0},\"Name\":\"Sum(finances_fact.Total Revenues)\",\"NativeReferenceName\":\"Total Revenues\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Revenues\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(finances_fact.Total Revenues)\":{\"displayName\":\"Total Revenues\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 135.99,
+          "width": 354.50,
+          "x": 39.73,
+          "y": 100.85,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"b0c755dde5e593142749\",\"layouts\":[{\"id\":0,\"position\":{\"x\":423.2597623089983,\"y\":252.12224108658742,\"z\":4000,\"width\":356,\"height\":212.3938879456706,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"areaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"finances_fact.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(finances_fact.Total Expenses)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"finances_fact\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Year\"},\"Name\":\"finances_fact.Year\",\"NativeReferenceName\":\"Year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Expenses\"}},\"Function\":0},\"Name\":\"Sum(finances_fact.Total Expenses)\",\"NativeReferenceName\":\"Total Expenses\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Expenses\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(finances_fact.Total Expenses)\":{\"displayName\":\"Total Expenses\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#272F67'\"}}}}}},\"selector\":{\"metadata\":\"Sum(finances_fact.Total Expenses)\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 212.39,
+          "width": 356.00,
+          "x": 423.26,
+          "y": 252.12,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"d9637ba7a4185c3940c9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":796.0950764006791,\"y\":252.12224108658742,\"z\":7000,\"width\":356.0271646859083,\"height\":212.3938879456706,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"areaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"finances_fact.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(finances_fact.Total Profit)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"finances_fact\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Year\"},\"Name\":\"finances_fact.Year\",\"NativeReferenceName\":\"Year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Profit\"}},\"Function\":0},\"Name\":\"Sum(finances_fact.Total Profit)\",\"NativeReferenceName\":\"Total Profit\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Profit\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(finances_fact.Total Profit)\":{\"displayName\":\"Total Profit\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FBD93F'\"}}}}}},\"selector\":{\"metadata\":\"Sum(finances_fact.Total Profit)\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 212.39,
+          "width": 356.03,
+          "x": 796.10,
+          "y": 252.12,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"dfd334fdec2910f31c7c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":9000,\"width\":1199.490662139219,\"height\":100.84889643463497,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"\\t\"}]},{\"textRuns\":[{\"value\":\"\\t\",\"textStyle\":{\"color\":\"#000000\"}},{\"value\":\"NCAA Revenues & Expenses \",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"32pt\",\"color\":\"#000000\"}},{\"value\":\"|\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"32pt\",\"color\":\"#fbd93f\"}},{\"value\":\" Summary View\",\"textStyle\":{\"fontSize\":\"32pt\",\"color\":\"#000000\"}}]}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'Outer'\"}}},\"preset\":{\"expr\":{\"Literal\":{\"Value\":\"'BottomRight'\"}}},\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"270L\"}}},\"shadowDistance\":{\"expr\":{\"Literal\":{\"Value\":\"10L\"}}},\"shadowBlur\":{\"expr\":{\"Literal\":{\"Value\":\"10L\"}}},\"shadowSpread\":{\"expr\":{\"Literal\":{\"Value\":\"3L\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"70L\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 100.85,
+          "width": 1199.49,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"f5358841a1cef9261ed6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":39.7283531409168,\"y\":252.12224108658742,\"z\":1000,\"width\":356.0271646859083,\"height\":212.3938879456706,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"areaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"finances_fact.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(finances_fact.Total Revenues)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"finances_fact\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Year\"},\"Name\":\"finances_fact.Year\",\"NativeReferenceName\":\"Year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Revenues\"}},\"Function\":0},\"Name\":\"Sum(finances_fact.Total Revenues)\",\"NativeReferenceName\":\"Total Revenues\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Revenues\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(finances_fact.Total Revenues)\":{\"displayName\":\"Total Revenues\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#6A98C3'\"}}}}}},\"selector\":{\"metadata\":\"Sum(finances_fact.Total Revenues)\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 212.39,
+          "width": 356.03,
+          "x": 39.73,
+          "y": 252.12,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"fb216b01c968a4536ee0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":797.623089983022,\"y\":498.13242784380304,\"z\":8000,\"width\":356.0271646859083,\"height\":374.36332767402376,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"conference_dim.Conference Abb\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(finances_fact.Total Profit)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"conference_dim\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"finances_fact\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Conference Abb\"},\"Name\":\"conference_dim.Conference Abb\",\"NativeReferenceName\":\"Conference Abb\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Profit\"}},\"Function\":0},\"Name\":\"Sum(finances_fact.Total Profit)\",\"NativeReferenceName\":\"Sum of Total Profit\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Profit\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FBD93F'\"}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Conference'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 374.36,
+          "width": 356.03,
+          "x": 797.62,
+          "y": 498.13,
+          "z": 8000.00
+        }
+      ],
+      "width": 1200.00
+    },
+    {
+      "config": "{\"relationships\":[{\"source\":\"02171459c169282f8f44\",\"target\":\"0b9af486dbb6ecb09ab0\",\"type\":3},{\"source\":\"02171459c169282f8f44\",\"target\":\"74903147b990895ab773\",\"type\":3},{\"source\":\"02171459c169282f8f44\",\"target\":\"6cd3060eded15b027f8b\",\"type\":3},{\"source\":\"a597de37a69a1d0673b0\",\"target\":\"13336669dfff50eba568\",\"type\":3},{\"source\":\"a597de37a69a1d0673b0\",\"target\":\"d9c84c24071edde965d5\",\"type\":3},{\"source\":\"13336669dfff50eba568\",\"target\":\"a597de37a69a1d0673b0\",\"type\":3},{\"source\":\"13336669dfff50eba568\",\"target\":\"d9c84c24071edde965d5\",\"type\":3},{\"source\":\"d9c84c24071edde965d5\",\"target\":\"13336669dfff50eba568\",\"type\":3},{\"source\":\"d9c84c24071edde965d5\",\"target\":\"a597de37a69a1d0673b0\",\"type\":3},{\"source\":\"d9c84c24071edde965d5\",\"target\":\"5feba7365c9493d66f23\",\"type\":3},{\"source\":\"d9c84c24071edde965d5\",\"target\":\"74903147b990895ab773\",\"type\":3},{\"source\":\"d9c84c24071edde965d5\",\"target\":\"af7a6b4c337625e14475\",\"type\":3},{\"source\":\"d9c84c24071edde965d5\",\"target\":\"0b9af486dbb6ecb09ab0\",\"type\":3},{\"source\":\"13336669dfff50eba568\",\"target\":\"af7a6b4c337625e14475\",\"type\":3},{\"source\":\"13336669dfff50eba568\",\"target\":\"0b9af486dbb6ecb09ab0\",\"type\":3},{\"source\":\"13336669dfff50eba568\",\"target\":\"02171459c169282f8f44\",\"type\":1},{\"source\":\"13336669dfff50eba568\",\"target\":\"6cd3060eded15b027f8b\",\"type\":3},{\"source\":\"a597de37a69a1d0673b0\",\"target\":\"02171459c169282f8f44\",\"type\":1},{\"source\":\"a597de37a69a1d0673b0\",\"target\":\"6cd3060eded15b027f8b\",\"type\":3},{\"source\":\"a597de37a69a1d0673b0\",\"target\":\"5feba7365c9493d66f23\",\"type\":3},{\"source\":\"a597de37a69a1d0673b0\",\"target\":\"74903147b990895ab773\",\"type\":3},{\"source\":\"a597de37a69a1d0673b0\",\"target\":\"1e80810278d105fea721\",\"type\":3},{\"source\":\"13336669dfff50eba568\",\"target\":\"1e80810278d105fea721\",\"type\":3},{\"source\":\"02171459c169282f8f44\",\"target\":\"d9c84c24071edde965d5\",\"type\":1}]}",
+      "displayName": "School View",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter862230faf84a59eb8998\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"conference_dim\"}},\"Property\":\"Conference Abb\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"conference_dim\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Conference Abb\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}},{\"name\":\"Filter1b5eac21b5e246983ef3\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"conference_dim\"}},\"Property\":\"Conference Abb\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"conference_dim\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Conference Abb\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'B10'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":5,\"objects\":{}}]",
+      "height": 900.00,
+      "name": "ReportSection1f2c6a6a359e4cf9f283",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"02171459c169282f8f44\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1100.169779286927,\"y\":13.752122241086587,\"z\":10000,\"width\":134.46519524617995,\"height\":74.87266553480475,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"finances_fact.Year\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"finances_fact\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Year\"},\"Name\":\"finances_fact.Year\",\"NativeReferenceName\":\"Year\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}},\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 74.87,
+          "width": 134.47,
+          "x": 1100.17,
+          "y": 13.75,
+          "z": 10000.00
+        },
+        {
+          "config": "{\"name\":\"0b9af486dbb6ecb09ab0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":39.7283531409168,\"y\":252.12224108658742,\"z\":1000,\"width\":356.0271646859083,\"height\":212.3938879456706,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"areaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"finances_fact.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(finances_fact.Total Revenues)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"finances_fact\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Year\"},\"Name\":\"finances_fact.Year\",\"NativeReferenceName\":\"Year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Revenues\"}},\"Function\":0},\"Name\":\"Sum(finances_fact.Total Revenues)\",\"NativeReferenceName\":\"Total Revenues\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Revenues\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(finances_fact.Total Revenues)\":{\"displayName\":\"Total Revenues\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#6A98C3'\"}}}}}},\"selector\":{\"metadata\":\"Sum(finances_fact.Total Revenues)\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 212.39,
+          "width": 356.03,
+          "x": 39.73,
+          "y": 252.12,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"13336669dfff50eba568\",\"layouts\":[{\"id\":0,\"position\":{\"x\":417.14770797962643,\"y\":498.13242784380304,\"z\":5000,\"width\":356.0271646859083,\"height\":374.36332767402376,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"conference_dim.Conference Abb\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(finances_fact.Total Expenses)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"conference_dim\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"finances_fact\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Conference Abb\"},\"Name\":\"conference_dim.Conference Abb\",\"NativeReferenceName\":\"Conference Abb\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Expenses\"}},\"Function\":0},\"Name\":\"Sum(finances_fact.Total Expenses)\",\"NativeReferenceName\":\"Sum of Total Expenses\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Expenses\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#272F67'\"}}}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Conference'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 374.36,
+          "width": 356.03,
+          "x": 417.15,
+          "y": 498.13,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"1e80810278d105fea721\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":9000,\"width\":1249.9151103565364,\"height\":100.84889643463497,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"\\t\"}]},{\"textRuns\":[{\"value\":\"\\t\",\"textStyle\":{\"color\":\"#000000\"}},{\"value\":\"NCAA Revenues & Expenses \",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"32pt\",\"color\":\"#000000\"}},{\"value\":\"|\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"32pt\",\"color\":\"#fbd93f\"}},{\"value\":\" \",\"textStyle\":{\"fontSize\":\"32pt\",\"color\":\"#000000\"}},{\"value\":\"School View\",\"textStyle\":{\"fontSize\":\"16pt\",\"color\":\"#000000\"}}]}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'Outer'\"}}},\"preset\":{\"expr\":{\"Literal\":{\"Value\":\"'BottomRight'\"}}},\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"270L\"}}},\"shadowDistance\":{\"expr\":{\"Literal\":{\"Value\":\"10L\"}}},\"shadowBlur\":{\"expr\":{\"Literal\":{\"Value\":\"10L\"}}},\"shadowSpread\":{\"expr\":{\"Literal\":{\"Value\":\"3L\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"70L\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 100.85,
+          "width": 1249.92,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"5feba7365c9493d66f23\",\"layouts\":[{\"id\":0,\"position\":{\"x\":418.6757215619694,\"y\":100.84889643463497,\"z\":3000,\"width\":354.49915110356534,\"height\":135.9932088285229,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(finances_fact.Total Expenses)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"finances_fact\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Expenses\"}},\"Function\":0},\"Name\":\"Sum(finances_fact.Total Expenses)\",\"NativeReferenceName\":\"Total Expenses\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Expenses\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(finances_fact.Total Expenses)\":{\"displayName\":\"Total Expenses\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 135.99,
+          "width": 354.50,
+          "x": 418.68,
+          "y": 100.85,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"6094e292b647c26ad85f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":762.4787775891341,\"y\":22.92020373514431,\"z\":10002,\"width\":224.61799660441423,\"height\":58.064516129032256,\"tabOrder\":10001}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(conference_dim.Conference Abb)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"conference_dim\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Conference Abb\"}},\"Function\":3},\"Name\":\"Min(conference_dim.Conference Abb)\",\"NativeReferenceName\":\"First Conference Abb\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"25D\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 58.06,
+          "width": 224.62,
+          "x": 762.48,
+          "y": 22.92,
+          "z": 10002.00
+        },
+        {
+          "config": "{\"name\":\"6cd3060eded15b027f8b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":796.0950764006791,\"y\":252.12224108658742,\"z\":7000,\"width\":356.0271646859083,\"height\":212.3938879456706,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"areaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"finances_fact.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(finances_fact.Total Profit)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"finances_fact\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Year\"},\"Name\":\"finances_fact.Year\",\"NativeReferenceName\":\"Year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Profit\"}},\"Function\":0},\"Name\":\"Sum(finances_fact.Total Profit)\",\"NativeReferenceName\":\"Total Profit\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Profit\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(finances_fact.Total Profit)\":{\"displayName\":\"Total Profit\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FBD93F'\"}}}}}},\"selector\":{\"metadata\":\"Sum(finances_fact.Total Profit)\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 212.39,
+          "width": 356.03,
+          "x": 796.10,
+          "y": 252.12,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"74903147b990895ab773\",\"layouts\":[{\"id\":0,\"position\":{\"x\":423.2597623089983,\"y\":252.12224108658742,\"z\":4000,\"width\":356,\"height\":212.3938879456706,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"areaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"finances_fact.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(finances_fact.Total Expenses)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"finances_fact\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Year\"},\"Name\":\"finances_fact.Year\",\"NativeReferenceName\":\"Year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Expenses\"}},\"Function\":0},\"Name\":\"Sum(finances_fact.Total Expenses)\",\"NativeReferenceName\":\"Total Expenses\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Expenses\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(finances_fact.Total Expenses)\":{\"displayName\":\"Total Expenses\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#272F67'\"}}}}}},\"selector\":{\"metadata\":\"Sum(finances_fact.Total Expenses)\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 212.39,
+          "width": 356.00,
+          "x": 423.26,
+          "y": 252.12,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"a597de37a69a1d0673b0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":38.20033955857385,\"y\":498.13242784380304,\"z\":2000,\"width\":354.49915110356534,\"height\":374.36332767402376,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"conference_dim.Conference Abb\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(finances_fact.Total Revenues)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"conference_dim\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"finances_fact\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Conference Abb\"},\"Name\":\"conference_dim.Conference Abb\",\"NativeReferenceName\":\"Conference Abb\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Revenues\"}},\"Function\":0},\"Name\":\"Sum(finances_fact.Total Revenues)\",\"NativeReferenceName\":\"Sum of Total Revenues\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Revenues\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#6A98C3'\"}}}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Conference'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 374.36,
+          "width": 354.50,
+          "x": 38.20,
+          "y": 498.13,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"aa19fc725ad8c8e92dcd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":796.0950764006791,\"y\":100.84889643463497,\"z\":6000,\"width\":354,\"height\":135.9932088285229,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(finances_fact.Total Profit)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"finances_fact\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Profit\"}},\"Function\":0},\"Name\":\"Sum(finances_fact.Total Profit)\",\"NativeReferenceName\":\"Total Profit\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Profit\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(finances_fact.Total Profit)\":{\"displayName\":\"Total Profit\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 135.99,
+          "width": 354.00,
+          "x": 796.10,
+          "y": 100.85,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"af7a6b4c337625e14475\",\"layouts\":[{\"id\":0,\"position\":{\"x\":39.7283531409168,\"y\":100.84889643463497,\"z\":0,\"width\":354.49915110356534,\"height\":135.9932088285229,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(finances_fact.Total Revenues)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"finances_fact\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Revenues\"}},\"Function\":0},\"Name\":\"Sum(finances_fact.Total Revenues)\",\"NativeReferenceName\":\"Total Revenues\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Revenues\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(finances_fact.Total Revenues)\":{\"displayName\":\"Total Revenues\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 135.99,
+          "width": 354.50,
+          "x": 39.73,
+          "y": 100.85,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"c5a0798c5ce23c313989\",\"layouts\":[{\"id\":0,\"position\":{\"x\":997.7928692699489,\"y\":32.088285229202036,\"z\":10001,\"width\":102.37691001697792,\"height\":39.7283531409168}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}],\"text\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Go Back'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Go Back'\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 39.73,
+          "width": 102.38,
+          "x": 997.79,
+          "y": 32.09,
+          "z": 10001.00
+        },
+        {
+          "config": "{\"name\":\"d9c84c24071edde965d5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":797.623089983022,\"y\":498.13242784380304,\"z\":8000,\"width\":356.0271646859083,\"height\":374.36332767402376,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"conference_dim.Conference Abb\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(finances_fact.Total Profit)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"conference_dim\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"finances_fact\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Conference Abb\"},\"Name\":\"conference_dim.Conference Abb\",\"NativeReferenceName\":\"Conference Abb\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Profit\"}},\"Function\":0},\"Name\":\"Sum(finances_fact.Total Profit)\",\"NativeReferenceName\":\"Sum of Total Profit\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Profit\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FBD93F'\"}}}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Conference'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 374.36,
+          "width": 356.03,
+          "x": 797.62,
+          "y": 498.13,
+          "z": 8000.00
+        }
+      ],
+      "width": 1250.00
+    }
+  ]
+}
