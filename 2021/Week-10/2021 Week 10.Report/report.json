@@ -1,0 +1,66 @@
+{
+  "config": "{\"version\":\"5.37\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY20SU09\",\"version\":\"5.17\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1,\"allowDataPointLassoSelect\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "publicCustomVisuals": [
+    "violinPlot4D46EB9EB3A141D9BA2289793175D971"
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY20SU09",
+            "path": "BaseThemes/CY20SU09.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Violin Plot",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"7b026983363d0050ece3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":23.225806451612904,\"y\":44.00679117147708,\"z\":0,\"width\":1235.8573853989813,\"height\":579.4227504244483,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"violinPlot4D46EB9EB3A141D9BA2289793175D971\",\"projections\":{\"sampling\":[{\"queryRef\":\"Date.Date\"}],\"measure\":[{\"queryRef\":\"Avg(Temperatures.Avg Temp C)\"}],\"category\":[{\"queryRef\":\"Date.Month\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Date\",\"Type\":0},{\"Name\":\"t\",\"Entity\":\"Temperatures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"},\"Name\":\"Date.Date\",\"NativeReferenceName\":\"Date\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Avg Temp C\"}},\"Function\":1},\"Name\":\"Avg(Temperatures.Avg Temp C)\",\"NativeReferenceName\":\"Avg Temp C\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Month\"},\"Name\":\"Date.Month\",\"NativeReferenceName\":\"Month\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoints\":[{\"properties\":{\"plotType\":{\"expr\":{\"Literal\":{\"Value\":\"'barcodePlot'\"}}},\"showQuartiles\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"violin\":[{\"properties\":{\"resolution\":{\"expr\":{\"Literal\":{\"Value\":\"50D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'2020 Daily Average Temperatures in Denver, Colorado'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 579.42,
+          "width": 1235.86,
+          "x": 23.23,
+          "y": 44.01,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Data Source & Power BI Help",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectione93686346c580929b5af",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"e6f8605f3722efa9145d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.67938021454112,\"y\":0,\"z\":0,\"width\":733.8259833134683,\"height\":720.0953516090583}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Source Data\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"14pt\"}}]},{\"textRuns\":[{\"value\":\"NOAA's Denver/Boulder Weather Forecast Office: \",\"textStyle\":{\"fontSize\":\"12pt\"}},{\"value\":\"https://w2.weather.gov/climate/index.php?wfo=bou\",\"textStyle\":{\"fontSize\":\"12pt\"},\"url\":\"https://w2.weather.gov/climate/index.php?wfo=bou\"},{\"value\":\" \",\"textStyle\":{\"fontSize\":\"12pt\"}}]},{\"textRuns\":[{\"value\":\"Data retrieved 6 March 2021. \",\"textStyle\":{\"fontSize\":\"12pt\"}}]},{\"textRuns\":[{\"value\":\"This data is in the public domain. \",\"textStyle\":{\"fontSize\":\"12pt\"}}]},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"Power BI Help\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"14pt\"}}]},{\"textRuns\":[{\"value\":\"Importing a custom visual: \",\"textStyle\":{\"fontSize\":\"12pt\"}},{\"value\":\"https://docs.microsoft.com/en-us/power-bi/developer/visuals/power-bi-custom-visuals\",\"textStyle\":{\"fontSize\":\"12pt\"},\"url\":\"https://docs.microsoft.com/en-us/power-bi/developer/visuals/power-bi-custom-visuals\"}]},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"Violin Plot Help\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"14pt\"}}]},{\"textRuns\":[{\"value\":\"Violin plot on AppSource: \",\"textStyle\":{\"fontSize\":\"12pt\"}},{\"value\":\"https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381947?tab=DetailsAndSupport\",\"textStyle\":{\"fontSize\":\"12pt\"},\"url\":\"https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381947?tab=DetailsAndSupport\"}]},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"Violin plot .pbiviz file download: \",\"textStyle\":{\"fontSize\":\"12pt\"}},{\"value\":\"https://bitbucket.org/dm-p/power-bi-visuals-violin-plot/downloads/violinPlot.1.3.0.4.pbiviz\",\"textStyle\":{\"fontSize\":\"12pt\"},\"url\":\"https://bitbucket.org/dm-p/power-bi-visuals-violin-plot/downloads/violinPlot.1.3.0.4.pbiviz\"}]},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"Violin plot wiki - Usage and details: h\",\"textStyle\":{\"fontSize\":\"12pt\"}},{\"value\":\"ttps://bitbucket.org/dm-p/power-bi-visuals-violin-plot/wiki/Usage%20and%20Visual%20Properties#markdown-header-kernels\",\"textStyle\":{\"fontSize\":\"12pt\"},\"url\":\"http://ttps//bitbucket.org/dm-p/power-bi-visuals-violin-plot/wiki/Usage%20and%20Visual%20Properties#markdown-header-kernels\"}]},{\"textRuns\":[{\"value\":\"\"}]}]}}]}}}",
+          "filters": "[]",
+          "height": 720.10,
+          "width": 733.83,
+          "x": 10.68,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

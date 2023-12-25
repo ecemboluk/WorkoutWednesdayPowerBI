@@ -1,0 +1,74 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 151.38305001469371,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 578.38305001469359,
+            "y": 43.155302040153231
+          },
+          "nodeIndex": "conference_dim",
+          "nodeLineageTag": "c68a6e21-28d3-461f-8c62-eaca19da5191",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 294.20156119318517,
+            "y": -10
+          },
+          "nodeIndex": "finances_fact",
+          "nodeLineageTag": "613e6a12-3721-46e7-bd09-06326868dc21",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 10,
+            "y": 61.140412819754275
+          },
+          "nodeIndex": "school_dim",
+          "nodeLineageTag": "babf75a6-c951-492a-a828-8e4657fc28e8",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 852.38305001469359,
+            "y": 86
+          },
+          "nodeIndex": "SwitchTable",
+          "nodeLineageTag": "a1985a0e-0a19-4796-9230-b777f10ab088",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

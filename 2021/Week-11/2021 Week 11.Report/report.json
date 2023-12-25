@@ -1,0 +1,60 @@
+{
+  "config": "{\"version\":\"5.49\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU11\",\"version\":\"5.49\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU11",
+            "path": "BaseThemes/CY23SU11.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Solution",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"37b277146cb6e40764e2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":37.89473684210527,\"y\":11.00169779286927,\"z\":2,\"width\":1025.6027164685909,\"height\":62.34295415959253,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Workout Wednesday | Power BI\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"20pt\"}},{\"value\":\" Can you Turn a Ribbon Chart into a Bump Chart?\",\"textStyle\":{\"fontSize\":\"20pt\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 62.34,
+          "width": 1025.60,
+          "x": 37.89,
+          "y": 11.00,
+          "z": 2.00
+        },
+        {
+          "config": "{\"name\":\"38be6300bb5d5d3a0180\",\"layouts\":[{\"id\":0,\"position\":{\"x\":38.422084122012095,\"y\":400.6874487009833,\"z\":1,\"width\":1196.5734769426624,\"height\":281.3045444647314,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"financials.Date\",\"active\":true}],\"Y\":[{\"queryRef\":\"financials.RankingSales\"}],\"Series\":[{\"queryRef\":\"financials.Country\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"financials\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Date\"},\"Name\":\"financials.Date\",\"NativeReferenceName\":\"Date\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"RankingSales\"},\"Name\":\"financials.RankingSales\",\"NativeReferenceName\":\"Sales Rank\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Country\"},\"Name\":\"financials.Country\",\"NativeReferenceName\":\"Country\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Date\"}}}]},\"columnProperties\":{\"financials.RankingSales\":{\"displayName\":\"Sales Rank\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"lineStyles\":[{\"properties\":{\"showMarker\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"markerShape\":{\"expr\":{\"Literal\":{\"Value\":\"'diamond'\"}}},\"markerSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0.4}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"financials\"}},\"Property\":\"Country\"}},\"Right\":{\"Literal\":{\"Value\":\"'United States of America'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#31A286'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"financials\"}},\"Property\":\"Country\"}},\"Right\":{\"Literal\":{\"Value\":\"'France'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":5,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"financials\"}},\"Property\":\"Country\"}},\"Right\":{\"Literal\":{\"Value\":\"'Germany'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0.2}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"financials\"}},\"Property\":\"Country\"}},\"Right\":{\"Literal\":{\"Value\":\"'Mexico'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"financials\"}},\"Property\":\"Country\"}},\"Right\":{\"Literal\":{\"Value\":\"'Canada'\"}}}}}]}}]}}}",
+          "filters": "[]",
+          "height": 281.30,
+          "width": 1196.57,
+          "x": 38.42,
+          "y": 400.69,
+          "z": 1.00
+        },
+        {
+          "config": "{\"name\":\"ccbdb1f579a1c3061515\",\"layouts\":[{\"id\":0,\"position\":{\"x\":38.422084122012095,\"y\":93.31077572488653,\"z\":0,\"width\":1196.5734769426624,\"height\":281.3045444647314,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"ribbonChart\",\"projections\":{\"Series\":[{\"queryRef\":\"financials.Country\"}],\"Category\":[{\"queryRef\":\"financials.Date\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(financials. Sales)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"financials\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Country\"},\"Name\":\"financials.Country\",\"NativeReferenceName\":\"Country\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Date\"},\"Name\":\"financials.Date\",\"NativeReferenceName\":\"Date\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\" Sales\"}},\"Function\":0},\"Name\":\"Sum(financials. Sales)\",\"NativeReferenceName\":\"Sales\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Date\"}}}]},\"columnProperties\":{\"Sum(financials. Sales)\":{\"displayName\":\"Sales\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"financials\"}},\"Property\":\"Country\"}},\"Right\":{\"Literal\":{\"Value\":\"'Canada'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#31A286'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"financials\"}},\"Property\":\"Country\"}},\"Right\":{\"Literal\":{\"Value\":\"'France'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":5,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"financials\"}},\"Property\":\"Country\"}},\"Right\":{\"Literal\":{\"Value\":\"'Germany'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#C2678E'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"financials\"}},\"Property\":\"Country\"}},\"Right\":{\"Literal\":{\"Value\":\"'Mexico'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0.4}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"financials\"}},\"Property\":\"Country\"}},\"Right\":{\"Literal\":{\"Value\":\"'United States of America'\"}}}}}]}}]}}}",
+          "filters": "[]",
+          "height": 281.30,
+          "width": 1196.57,
+          "x": 38.42,
+          "y": 93.31,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

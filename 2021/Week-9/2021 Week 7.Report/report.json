@@ -1,0 +1,180 @@
+{
+  "config": "{\"version\":\"5.49\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU11\",\"version\":\"5.49\",\"type\":2}},\"activeSectionIndex\":1,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU11",
+            "path": "BaseThemes/CY23SU11.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Ice Coverage",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1afb9359a6327ba4b5e8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":18.33616298811545,\"y\":250.5942275042445,\"z\":2000,\"width\":693.106960950764,\"height\":179.6943972835314,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Sheet1.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Sheet1.Coverage)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Sheet1\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Year\"},\"Name\":\"Sheet1.Year\",\"NativeReferenceName\":\"Year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Coverage\"}},\"Function\":1},\"Name\":\"Sum(Sheet1.Coverage)\",\"NativeReferenceName\":\"Average of Coverage\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Coverage\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"seriesLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"zoom\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"lineStyles\":[{\"properties\":{\"showMarker\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"trend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"displayName\":{\"expr\":{\"Literal\":{\"Value\":\"'Trend line 1'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 179.69,
+          "width": 693.11,
+          "x": 18.34,
+          "y": 250.59,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"2c11e5e118180548a308\",\"layouts\":[{\"id\":0,\"position\":{\"x\":18.33616298811545,\"y\":460.848896434635,\"z\":3000,\"width\":693.106960950764,\"height\":180.91680814940577,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Sheet1.Lake\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Sheet1.Coverage)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Sheet1\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Lake\"},\"Name\":\"Sheet1.Lake\",\"NativeReferenceName\":\"Lake\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Coverage\"}},\"Function\":4},\"Name\":\"Sum(Sheet1.Coverage)\",\"NativeReferenceName\":\"Max of Coverage\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Coverage\"}},\"Function\":4}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelPosition\":{\"expr\":{\"Literal\":{\"Value\":\"'InsideEnd'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 180.92,
+          "width": 693.11,
+          "x": 18.34,
+          "y": 460.85,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"484751a647a0d7110a07\",\"layouts\":[{\"id\":0,\"position\":{\"x\":18.33616298811545,\"y\":116.12903225806451,\"z\":1000,\"width\":693.106960950764,\"height\":119.79626485568761,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Sheet1.Year\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Sheet1\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Year\"},\"Name\":\"Sheet1.Year\",\"NativeReferenceName\":\"Select a Range of Years\"}]},\"columnProperties\":{\"Sheet1.Year\":{\"displayName\":\"Select a Range of Years\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 119.80,
+          "width": 693.11,
+          "x": 18.34,
+          "y": 116.13,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"685164811240318c2a2d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":680.8828522920204,\"z\":5000,\"width\":1279.8641765704585,\"height\":39.117147707979626,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"\\t\"},{\"value\":\"Data: NOAA - Great Lakes Environmental Research Laboratory\",\"textStyle\":{\"color\":\"#ffffff\"}}]}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#142282'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 39.12,
+          "width": 1279.86,
+          "x": 0.00,
+          "y": 680.88,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"78b3b3b05d1730665e89\",\"layouts\":[{\"id\":0,\"position\":{\"x\":726.1120543293719,\"y\":116.12903225806451,\"z\":4000,\"width\":537.8607809847199,\"height\":525.6366723259763,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Sheet1.Year\",\"active\":true}],\"Columns\":[{\"queryRef\":\"Sheet1.Lake\",\"active\":true}],\"Values\":[{\"queryRef\":\"Sum(Sheet1.Coverage)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Sheet1\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Year\"},\"Name\":\"Sheet1.Year\",\"NativeReferenceName\":\"Year\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Lake\"},\"Name\":\"Sheet1.Lake\",\"NativeReferenceName\":\"Lake\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Coverage\"}},\"Function\":4},\"Name\":\"Sum(Sheet1.Coverage)\",\"NativeReferenceName\":\"Max of Coverage\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Year\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"subTotals\":[{\"properties\":{\"columnSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"rowSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"55.66890632895671D\"}}}},\"selector\":{\"metadata\":\"Sheet1.Year\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"70.55687802045685D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Lake\"}},\"Right\":{\"Literal\":{\"Value\":\"'All Lakes'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"78.1387370191512D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Lake\"}},\"Right\":{\"Literal\":{\"Value\":\"'Erie'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"71.22584496008356D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Lake\"}},\"Right\":{\"Literal\":{\"Value\":\"'Huron'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"80.89136418410254D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Lake\"}},\"Right\":{\"Literal\":{\"Value\":\"'Michigan'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"76.780974183441D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Lake\"}},\"Right\":{\"Literal\":{\"Value\":\"'Ontario'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"89.11546214211629D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Lake\"}},\"Right\":{\"Literal\":{\"Value\":\"'Superior'\"}}}}}]}}],\"values\":[{\"properties\":{\"backColor\":{\"solid\":{\"color\":{\"expr\":{\"Conditional\":{\"Cases\":[{\"Condition\":{\"And\":{\"Left\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Coverage\"}},\"Function\":4}},\"Right\":{\"Literal\":{\"Value\":\"75D\"}}}},\"Right\":{\"Comparison\":{\"ComparisonKind\":4,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Coverage\"}},\"Function\":4}},\"Right\":{\"Literal\":{\"Value\":\"100D\"}}}}}},\"Value\":{\"Literal\":{\"Value\":\"'#0d6abf'\"}}},{\"Condition\":{\"And\":{\"Left\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Coverage\"}},\"Function\":4}},\"Right\":{\"Literal\":{\"Value\":\"50D\"}}}},\"Right\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Coverage\"}},\"Function\":4}},\"Right\":{\"Literal\":{\"Value\":\"75D\"}}}}}},\"Value\":{\"Literal\":{\"Value\":\"'#41a4ff'\"}}},{\"Condition\":{\"And\":{\"Left\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Coverage\"}},\"Function\":4}},\"Right\":{\"Literal\":{\"Value\":\"25D\"}}}},\"Right\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Coverage\"}},\"Function\":4}},\"Right\":{\"Literal\":{\"Value\":\"50D\"}}}}}},\"Value\":{\"Literal\":{\"Value\":\"'#70bbff'\"}}},{\"Condition\":{\"And\":{\"Left\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Coverage\"}},\"Function\":4}},\"Right\":{\"Literal\":{\"Value\":\"0D\"}}}},\"Right\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Coverage\"}},\"Function\":4}},\"Right\":{\"Literal\":{\"Value\":\"25D\"}}}}}},\"Value\":{\"Literal\":{\"Value\":\"'#DEEFFF'\"}}}]}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Conditional\":{\"Cases\":[{\"Condition\":{\"And\":{\"Left\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Coverage\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"75D\"}}}},\"Right\":{\"Comparison\":{\"ComparisonKind\":4,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Coverage\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"100D\"}}}}}},\"Value\":{\"Literal\":{\"Value\":\"'#FFFFFF'\"}}}]}}}}},\"icon\":{\"kind\":\"Icon\",\"layout\":{\"expr\":{\"Literal\":{\"Value\":\"'Before'\"}}},\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}},\"value\":{\"expr\":{\"Conditional\":{\"Cases\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Coverage\"}},\"Function\":4}},\"Right\":{\"Literal\":{\"Value\":\"100D\"}}}},\"Value\":{\"Literal\":{\"Value\":\"'StarLow'\"}}}]}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}],\"metadata\":\"Sum(Sheet1.Coverage)\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Maximum Coverage by Lake'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 525.64,
+          "width": 537.86,
+          "x": 726.11,
+          "y": 116.13,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"a314f8eb48cd73e10dce\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280.278731637046,\"height\":91.93855843481465,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"\\t\"},{\"value\":\"Great Lakes Maximum Ice Coverage\",\"textStyle\":{\"fontSize\":\"20pt\",\"color\":\"#ffffff\"}}]},{\"textRuns\":[{\"value\":\"\\t\"},{\"value\":\"Percent coverage for five lakes from 1973 to 2020\",\"textStyle\":{\"fontSize\":\"16pt\",\"color\":\"#ffffff\"}}]}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#142282'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 91.94,
+          "width": 1280.28,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Forecasting and Anomalies",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter405d462070050575d333\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Lake\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Sheet1\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Lake\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'All Lakes'\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}]",
+      "height": 720.00,
+      "name": "ReportSectionbbba8d16600449018621",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"00e8868b5140e516baad\",\"layouts\":[{\"id\":0,\"position\":{\"x\":365.50084889643466,\"y\":116.12903225806451,\"z\":0,\"width\":893.5823429541596,\"height\":543.9728353140916,\"tabOrder\":5002}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#EDF1F2'\"}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 543.97,
+          "width": 893.58,
+          "x": 365.50,
+          "y": 116.13,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"052cc8ab4b63086babc7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":386.2818336162988,\"y\":138.13242784380307,\"z\":1000,\"width\":853.2427843803056,\"height\":240.8149405772496,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Sheet1.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Sheet1.Coverage)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Sheet1\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Year\"},\"Name\":\"Sheet1.Year\",\"NativeReferenceName\":\"Year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Coverage\"}},\"Function\":1},\"Name\":\"Sum(Sheet1.Coverage)\",\"NativeReferenceName\":\"Average of Coverage\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Coverage\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"seriesLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"zoom\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"lineStyles\":[{\"properties\":{\"showMarker\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"trend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"displayName\":{\"expr\":{\"Literal\":{\"Value\":\"'Trend line 1'\"}}}}}],\"forecast\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"displayName\":{\"expr\":{\"Literal\":{\"Value\":\"'Forecast 1'\"}}},\"transform\":{\"algorithm\":\"Forecast\",\"parameters\":[{\"Literal\":{\"Value\":\"7D\"},\"Name\":\"Unit\"},{\"Literal\":{\"Value\":\"10D\"},\"Name\":\"ForecastLength\"},{\"Literal\":{\"Value\":\"0D\"},\"Name\":\"IgnoreLast\"},{\"Literal\":{\"Value\":\"0.95D\"},\"Name\":\"ConfidenceLevel\"}]}},\"selector\":{\"metadata\":\"Sum(Sheet1.Coverage)\",\"id\":\"1\"}}]}}}",
+          "filters": "[]",
+          "height": 240.81,
+          "width": 853.24,
+          "x": 386.28,
+          "y": 138.13,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"2c1ce8fdb657d0cda9c0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":34.227504244482176,\"y\":378.94736842105266,\"z\":5003,\"width\":308.04753820033955,\"height\":129.5755517826825,\"tabOrder\":5004}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"At 94,4, 1979 had the highest Average of ice coverage and was 640% higher than 2012, which had the lowest Average of ice at 12,75.\",\"textStyle\":{\"fontSize\":\"14pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#edf1f2'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 129.58,
+          "width": 308.05,
+          "x": 34.23,
+          "y": 378.95,
+          "z": 5003.00
+        },
+        {
+          "config": "{\"name\":\"53f515d044b43190487d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":34.227504244482176,\"y\":146.6893039049236,\"z\":4000,\"width\":308.04753820033955,\"height\":190.6960950764007,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Sheet1.Coverage)1\"},{\"queryRef\":\"Sum(Sheet1.Coverage)\"}],\"Rows\":[{\"queryRef\":\"Sheet1.Lake\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Sheet1\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Coverage\"}},\"Function\":4},\"Name\":\"Sum(Sheet1.Coverage)\",\"NativeReferenceName\":\"Max of Coverage\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Lake\"},\"Name\":\"Sheet1.Lake\",\"NativeReferenceName\":\"Lake\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Coverage\"}},\"Function\":3},\"Name\":\"Sum(Sheet1.Coverage)1\",\"NativeReferenceName\":\"Min of Coverage\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"subTotals\":[{\"properties\":{\"columnSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"rowSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"70.55687802045685D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Lake\"}},\"Right\":{\"Literal\":{\"Value\":\"'All Lakes'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"78.1387370191512D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Lake\"}},\"Right\":{\"Literal\":{\"Value\":\"'Erie'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"71.22584496008356D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Lake\"}},\"Right\":{\"Literal\":{\"Value\":\"'Huron'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"80.89136418410254D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Lake\"}},\"Right\":{\"Literal\":{\"Value\":\"'Michigan'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"76.780974183441D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Lake\"}},\"Right\":{\"Literal\":{\"Value\":\"'Ontario'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"89.11546214211629D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Lake\"}},\"Right\":{\"Literal\":{\"Value\":\"'Superior'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"112.66909949628213D\"}}}},\"selector\":{\"metadata\":\"Sum(Sheet1.Coverage)1\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"98.77589264221592D\"}}}},\"selector\":{\"metadata\":\"Sum(Sheet1.Coverage)\"}}],\"values\":[{\"properties\":{},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}],\"metadata\":\"Sum(Sheet1.Coverage)\"}},{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}}}}],\"columnHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}],\"rowHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Maximum Coverage by Lake'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 190.70,
+          "width": 308.05,
+          "x": 34.23,
+          "y": 146.69,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"6dc35da380d0003b8b99\",\"layouts\":[{\"id\":0,\"position\":{\"x\":22.00339558573854,\"y\":116.12903225806451,\"z\":3000,\"width\":331.27334465195247,\"height\":543.9728353140916,\"tabOrder\":5001}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#EDF1F2'\"}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 543.97,
+          "width": 331.27,
+          "x": 22.00,
+          "y": 116.13,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"6f6bf800d91ea0108176\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":2000,\"width\":1280.278731637046,\"height\":91.93855843481465,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"\\t\"},{\"value\":\"Great Lakes Maximum Ice Coverage\",\"textStyle\":{\"fontSize\":\"20pt\",\"color\":\"#ffffff\"}}]},{\"textRuns\":[{\"value\":\"\\t\"},{\"value\":\"A Closer Look at Percent Coverage\",\"textStyle\":{\"fontSize\":\"16pt\",\"color\":\"#ffffff\"}}]}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#142282'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 91.94,
+          "width": 1280.28,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"b77b28abb776dac79a50\",\"layouts\":[{\"id\":0,\"position\":{\"x\":34.227504244482176,\"y\":606.3157894736843,\"z\":5002,\"width\":100.2376910016978,\"height\":40.33955857385399}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'PageNavigation'\"}}},\"navigationSection\":{\"expr\":{\"Literal\":{\"Value\":\"'ReportSection'\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 40.34,
+          "width": 100.24,
+          "x": 34.23,
+          "y": 606.32,
+          "z": 5002.00
+        },
+        {
+          "config": "{\"name\":\"ea1e18786b1c370b2e52\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":680.8828522920204,\"z\":5000,\"width\":1279.8641765704585,\"height\":39.117147707979626,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"\\t\"},{\"value\":\"Data: NOAA - Great Lakes Environmental Research Laboratory\",\"textStyle\":{\"color\":\"#ffffff\"}}]}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#142282'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 39.12,
+          "width": 1279.86,
+          "x": 0.00,
+          "y": 680.88,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"eacaf41590cc456783c8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":386.2818336162988,\"y\":404.61799660441426,\"z\":5001,\"width\":853.2427843803056,\"height\":242.03735144312395,\"tabOrder\":5003}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(Sheet1.Coverage)\"}],\"Category\":[{\"queryRef\":\"Sheet1.YearEndDate.Variation.Date Hierarchy.Year\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Sheet1\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Coverage\"}},\"Function\":1},\"Name\":\"Sum(Sheet1.Coverage)\",\"NativeReferenceName\":\"Average of Coverage\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Name\":\"Variation\",\"Property\":\"YearEndDate\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"Sheet1.YearEndDate.Variation.Date Hierarchy.Year\",\"NativeReferenceName\":\"YearEndDate Year\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Name\":\"Variation\",\"Property\":\"YearEndDate\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"seriesLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"zoom\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"lineStyles\":[{\"properties\":{\"showMarker\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"trend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"displayName\":{\"expr\":{\"Literal\":{\"Value\":\"'Trend line 1'\"}}}}}],\"anomalyDetection\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"displayName\":{\"expr\":{\"Literal\":{\"Value\":\"'Find anomalies 1'\"}}},\"transform\":{\"algorithm\":\"SampleAndDetectAnomaly\",\"parameters\":[{\"Literal\":{\"Value\":\"0.75D\"},\"Name\":\"Sensitivity\"},{\"Literal\":{\"Value\":\"3500L\"},\"Name\":\"SampleSizePerSeries\"}]},\"explainBy\":{\"exprs\":[],\"kind\":\"ExprList\"}},\"selector\":{\"metadata\":\"Sum(Sheet1.Coverage)\",\"id\":\"1\"}}]}}}",
+          "filters": "[]",
+          "height": 242.04,
+          "width": 853.24,
+          "x": 386.28,
+          "y": 404.62,
+          "z": 5001.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

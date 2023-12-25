@@ -1,0 +1,445 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Temperatures\",\"GetTempC\",\"CreateDateDim\",\"Date\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.123.684.0 (23.11)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "GetTempC",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Function"
+          }
+        ],
+        "expression": [
+          "let GetTempCelsius = (TempF) =>",
+          "        Int32.From((TempF - 32) * 5/9)",
+          "in GetTempCelsius"
+        ],
+        "kind": "m",
+        "lineageTag": "9d420f73-78f4-44ec-92b6-e30f3af23474"
+      },
+      {
+        "name": "CreateDateDim",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Function"
+          }
+        ],
+        "expression": [
+          "//Create Date Dimension (from Radacad)",
+          "(StartDate as date, EndDate as date)=>",
+          "",
+          "let",
+          "    //Capture the date range from the parameters",
+          "    StartDate = #date(Date.Year(StartDate), Date.Month(StartDate), ",
+          "    Date.Day(StartDate)),",
+          "    EndDate = #date(Date.Year(EndDate), Date.Month(EndDate), ",
+          "    Date.Day(EndDate)),",
+          "",
+          "    //Get the number of dates that will be required for the table",
+          "    GetDateCount = Duration.Days(EndDate - StartDate),",
+          "",
+          "    //Take the count of dates and turn it into a list of dates",
+          "    GetDateList = List.Dates(StartDate, GetDateCount, ",
+          "    #duration(1,0,0,0)),",
+          "",
+          "    //Convert the list into a table",
+          "    DateListToTable = Table.FromList(GetDateList, ",
+          "    Splitter.SplitByNothing(), {\"Date\"}, null, ExtraValues.Error),",
+          "",
+          "    //Create various date attributes from the date column",
+          "    //Add Year Column",
+          "    YearNumber = Table.AddColumn(DateListToTable, \"Year\", ",
+          "    each Date.Year([Date])),",
+          "",
+          "    //Add Quarter Column",
+          "    QuarterNumber = Table.AddColumn(YearNumber , \"Quarter\", ",
+          "    each \"Q\" & Number.ToText(Date.QuarterOfYear([Date]))),",
+          "",
+          "    //Add Week Number Column",
+          "    WeekNumber= Table.AddColumn(QuarterNumber , \"Week Number\", ",
+          "    each Date.WeekOfYear([Date])),",
+          "",
+          "    //Add Month Number Column",
+          "    MonthNumber = Table.AddColumn(WeekNumber, \"Month Number\", ",
+          "    each Date.Month([Date])),",
+          "",
+          "    //Add Month Name Column",
+          "    MonthName = Table.AddColumn(MonthNumber , \"Month\", ",
+          "    each Date.ToText([Date],\"MMMM\")),",
+          "",
+          "    //Add Day of Week Column",
+          "    DayOfWeek = Table.AddColumn(MonthName , \"Day of Week\", ",
+          "    each Date.ToText([Date],\"dddd\"))",
+          "",
+          "in",
+          "    DayOfWeek"
+        ],
+        "kind": "m",
+        "lineageTag": "acd139d5-3c30-4870-ad78-98f927023fde"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "2a97930a-7e59-46c7-9fa6-1bbd17baab38",
+        "fromColumn": "Observed Date",
+        "fromTable": "Temperatures",
+        "toColumn": "Date",
+        "toTable": "Date"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Temperatures",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Max Temp F",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "a92759ac-3af8-4eea-a2ef-225b78670d3c",
+            "sourceColumn": "Max Temp F",
+            "summarizeBy": "average"
+          },
+          {
+            "name": "Min Temp F",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "226488ad-fc2b-4393-8412-84baeaca32bc",
+            "sourceColumn": "Min Temp F",
+            "summarizeBy": "average"
+          },
+          {
+            "name": "Avg Temp F",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "4d7bac66-1003-49b8-994d-e0bf7c09756d",
+            "sourceColumn": "Avg Temp F",
+            "summarizeBy": "average"
+          },
+          {
+            "name": "Max Temp C",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "0d686f71-e648-4c7e-b78a-cb51a99d37ee",
+            "sourceColumn": "Max Temp C",
+            "summarizeBy": "average"
+          },
+          {
+            "name": "Min Temp C",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "b0397269-0d97-4d05-8976-71c1d98717be",
+            "sourceColumn": "Min Temp C",
+            "summarizeBy": "average"
+          },
+          {
+            "name": "Avg Temp C",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "37782ced-3f27-435b-8d0b-c44f2cb7996d",
+            "sourceColumn": "Avg Temp C",
+            "summarizeBy": "average"
+          },
+          {
+            "name": "Observed Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "isHidden": true,
+            "lineageTag": "65a98f44-7a9e-431b-97f1-f3b7a0388dfa",
+            "sourceColumn": "Observed Date",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "fbb5800e-a810-4f70-b2dd-7c9703bb5d6a",
+        "partitions": [
+          {
+            "name": "Temperatures-75922be8-fcbe-450f-994f-f9da7bae627f",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Excel.Workbook(File.Contents(\"C:\\Users\\meaga\\OneDrive\\Documents\\Denver2020Temperature.xlsx\"), null, true),",
+                "    Sheet1_Sheet = Source{[Item=\"Sheet1\",Kind=\"Sheet\"]}[Data],",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Promoted Headers\",{{\"MAXF\", \"Max Temp F\"}, {\"MINF\", \"Min Temp F\"}, {\"AVGF\", \"Avg Temp F\"}}),",
+                "    #\"Added Date Column\" = Table.AddColumn(#\"Renamed Columns\", \"Observed Date\", each [Month] & \" \" & Text.From([Day]) & \", 2020\"),",
+                "    #\"Change Date Column to Date\" = Table.TransformColumnTypes(#\"Added Date Column\",{{\"Observed Date\", type date}}),",
+                "    #\"Removed Day Month Columns\" = Table.RemoveColumns(#\"Change Date Column to Date\",{\"Month\", \"Day\"}),",
+                "    #\"Get Max Temp in C\" = Table.AddColumn(#\"Removed Day Month Columns\", \"Max Temp C\", each GetTempC([Max Temp F])),",
+                "    #\"Get Min Temp in C\" = Table.AddColumn(#\"Get Max Temp in C\", \"Min Temp C\", each GetTempC([Min Temp F])),",
+                "    #\"Get Avg Temp in C\" = Table.AddColumn(#\"Get Min Temp in C\", \"Avg Temp C\", each GetTempC([Avg Temp F])),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Get Avg Temp in C\",{{\"Max Temp F\", Int64.Type}, {\"Min Temp F\", Int64.Type}, {\"Avg Temp F\", Int64.Type}, {\"Max Temp C\", Int64.Type}, {\"Min Temp C\", Int64.Type}, {\"Avg Temp C\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Date",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "m/d/yyyy",
+            "isKey": true,
+            "lineageTag": "161542d5-71b3-4b01-af57-fab716e65e2a",
+            "sourceColumn": "Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "5016c1cd-d473-4604-965b-ae38ddd2dbe6",
+            "sourceColumn": "Year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "22efebe5-990f-4a6e-aa7c-47b4f3128253",
+            "sourceColumn": "Quarter",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Week Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "03385bbf-d48c-462f-b4fb-3e6001241230",
+            "sourceColumn": "Week Number",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Month Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "e1a7a0f0-97b5-4d4a-9ed3-e0fd0816b633",
+            "sourceColumn": "Month Number",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ac1cad99-5318-42a6-a2f8-fa5e69168a15",
+            "sortByColumn": "Month Number",
+            "sourceColumn": "Month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Day of Week",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b79543db-420f-42b4-a0bb-672245aa3dc5",
+            "sortByColumn": "Day of Week Number",
+            "sourceColumn": "Day of Week",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Day of Week Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "1d81a814-d2ed-4e34-91dc-28d95ff33609",
+            "sourceColumn": "Day of Week Number",
+            "summarizeBy": "none"
+          }
+        ],
+        "dataCategory": "Time",
+        "lineageTag": "758c3543-26ba-4ad0-9ed3-2681bc0bdac3",
+        "partitions": [
+          {
+            "name": "Date-d4e49d05-f785-4d00-96b8-c56170150929",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = CreateDateDim(#date(2020, 1, 1), #date(2021, 1, 1)),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Date\", type date}, {\"Year\", Int64.Type}, {\"Quarter\", type text}, {\"Week Number\", Int64.Type}, {\"Month Number\", Int64.Type}, {\"Month\", type text}, {\"Day of Week\", type text}}),",
+                "    #\"Inserted Day of Week\" = Table.AddColumn(#\"Changed Type\", \"Day of Week Number\", each Date.DayOfWeek([Date], Day.Monday)),",
+                "    #\"Change Day of Week to Int\" = Table.TransformColumnTypes(#\"Inserted Day of Week\",{{\"Day of Week Number\", Int64.Type}})",
+                "in",
+                "    #\"Change Day of Week to Int\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
